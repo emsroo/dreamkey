@@ -34,7 +34,6 @@ body {
     background-color: var(--bg-color);
 }
 
-<<<<<<< HEAD
 .navbar .navbar-brand {
     color: #FFFFFF; /* Naranja */
     font-size: 20px; /* Tamaño de letra opcional */
@@ -79,7 +78,7 @@ body {
     background-color: #ffcc00;
     border-color: #ffcc00;
     color: #221132;
-=======
+}
 h1, h2, h3, h4, h5, h6{
     font-weight: bold;
 }
@@ -87,5 +86,4 @@ h1, h2, h3, h4, h5, h6{
 p {
     font-size: small;
     color: var(--p-color);
->>>>>>> f14f105ac3ad050921692c8f5ea2c03c8577e159
 }

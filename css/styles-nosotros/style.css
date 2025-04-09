@@ -1,5 +1,4 @@
 html{
-
     /* Variables */
 
     /* Background color */
@@ -19,4 +18,21 @@ html{
     --color5-color: #000000;
 
     background-color: var(--bg-color);
+}
+
+.row{
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    justify-content: center; 
+}
+.col{
+    margin: 2%;
+}
+.card-img-top{
+    margin: auto;
+    display: flex;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
 }

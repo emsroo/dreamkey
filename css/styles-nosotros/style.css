@@ -20,3 +20,49 @@ html{
 
     background-color: var(--bg-color);
 }
+
+.navbar .navbar-brand {
+    color: #FFFFFF; /* Naranja */
+    font-size: 20px; /* Tamaño de letra opcional */
+  }
+
+  
+.bg-dark-purple {
+    background-color: #221132;
+}
+
+.navbar .nav-link {
+    color: #ffffff; 
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00; 
+}
+
+.navbar .nav-link.active {
+    color: #00bcd4; 
+    font-weight: bold;
+}
+
+.navbar .form-control {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.navbar .form-control::placeholder {
+    color: #cccccc; 
+}
+
+.navbar .btn-outline-light {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #221132;
+}

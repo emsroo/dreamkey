@@ -1,5 +1,4 @@
 html{
-
     /* Variables */
 
     /* Background color */
@@ -94,4 +93,20 @@ p {
 }
 div.col div.card{
     height: 100%;
+}
+.row{
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    justify-content: center; 
+}
+.col{
+    margin: 2%;
+}
+.card-img-top{
+    margin: auto;
+    display: flex;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
 }

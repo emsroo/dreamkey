@@ -18,5 +18,27 @@ html{
     --color4-color: #FFFFFF;
     --color5-color: #000000;
 
+}
+
+@font-face {
+    font-family: 'MagallanesRegular';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MagallanesBold';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+
+body {
+    font-family: 'MagallanesRegular', sans-serif;
     background-color: var(--bg-color);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+p {
+    font-size: small;
+    color: var(--p-color);
 }

@@ -87,3 +87,11 @@ p {
     font-size: small;
     color: var(--p-color);
 }
+
+.card {
+    background-color: var(--color2-color);
+
+}
+div.col div.card{
+    height: 100%;
+}

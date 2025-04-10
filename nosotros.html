@@ -6,54 +6,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles-nosotros/style.css">
   <title>Nosotros</title>
 </head>
 
 <body>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
+  <!--Navbar-->
 
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-purple">
+    <div class="container-fluid">
+     
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo" width="40" height="40">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="membresiasDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Membresías</a>
+                    <ul class="dropdown-menu" aria-labelledby="membresiasDropdown">
+                        <li><a class="dropdown-item" href="#">Tipo 1</a></li>
+                        <li><a class="dropdown-item" href="#">Tipo 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Afiliados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+        
+            <form class="d-flex ms-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Empresas y servicios" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+  <!--Descripción del proyecto-->
+  <div class="card text-center">
+    <div class="card-body">
+      <h1 class="card-title">Dreamkey</h1>
+      <h3 class="card-title">Todo lo que tu belleza necesita, en un solo clic.</h3>
+      <p class="card-text">Es una plataforma e-commerce enfocada en conectar usuarios con servicios de belleza
+        mediante una membresía digital. Permitirá a los clientes: Explorar empresas y servicios afiliados. Reservar
+        citas de manera rápida y sin tiempos de espera elevados. Conocer costos antes de agendar. Pagar anticipadamente
+        de forma segura. Para los negocios afiliados,
+        será una herramienta para gestionar citas y atraer más clientes.</p>
+      <h5 class="card-title">Mision</h5>
+      <p class="card-text">Somos una e-commerce que busca conectar clientes con empresas que aporten un servicio de
+        calidad en el área de la belleza y cuidado personal.
+      </p>
+      <h5 class="card-title">Vision</h5>
+      <p class="card-text">Mediante nuestra plataforma “DreamKey” nos preocupamos por la calidad de servicios de
+        nuestros clientes y paso a paso buscamos aumentar nuestra red de contactos para que nuestros clientes tengan más
+        opciones y una mejor experiencia uniendo tecnología y belleza.</p>
+    </div>
+  </div>
+  <!--Biografias de los integrantes en cards-->
+  <div class="row row-cols-4">
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top" src="./assets/img-nosotros/Fredy-Alonzo.jpg"  alt="Fredy-Alonzo">
+        <div class="card-body">
+          <h5 class="card-title">Fredy Eduardo Alonzo Mondragón</h5>
+          <p class="card-text">Ingeniero en Robótica Computacional proactivo, resiliente y comprometido. Con
+            especialización en el Desarrollo FullStack. Cuento con habilidades de trabajo en equipo utilizando
+            metodologías ágiles y el marco de trabajo Scrum con el fin de desarrollar productos de software complejos
+            para satisfacer las necesidades de los clientes.
+          </p>
+          <h5 class="card-title">Rol</h5>
+          <p class="card-text">Encargado de la gestión de desarrollo de la estructura de navegación de la página, de los
+            servicios y controladores REST.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top" src="./assets/img-nosotros/Ariadna-Fragoso.jpg" alt="Ariadna Fragoso">
+        <div class="card-body">
+          <h5 class="card-title">Ariadna Fragoso</h5>
+          <p class="card-text">Soy desarrolladora frontend. Actualmente, estoy trabajando en DreamKey, un proyecto
+            innovador de e-commerce en el que
+            colaboro con un equipo diverso. Este proyecto me permite integrar mis conocimientos en programación, creando
+            soluciones eficientes y escalables.</p>
+          <h5 class="subtitulo">Rol</h5>
+          <p class="subtituloText">Encargada del Spring Boot + Frontend + Deployment</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top" src="./assets/img-nosotros/Gregorio-Galindo.jpg" alt=" Imagen de desarrollador Gregorio Galindo">
+        <div class="card-body">
+          <h5 class="card-title">Gregorio Galindo</h5>
+          <p class="card-text">Desarrollador web full-stack enfocado a la resolución de problemas complejos, análisis de
+            requerimientos y diseño centrado en el usuario.</p>
+          <h5 class="subtitulo">Rol</h5>
+          <p class="subtituloText">Encargado del desarrollo de pagina de contacto</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top"src="./assets/img-nosotros/Adan-Olea.jpg"  alt="Adan Olea">
+        <div class="card-body">
+          <h5 class="card-title">Adán Olea</h5>
+          <p class="card-text">Ingeniero en computación enfocado en en desarrollo backend aunque estudio para llegar a
+            ser fullstack.
+            Soy un apasionado a la teconologia y me gusta estar aprendiendo sobre las nuevas novedades y actualizarme.
+            Tengo un año de experiencia laboral en IBM como Intern Software Developer en donde logre trabajar en grandes
+            proyectos de desarrollo y soporte. </p>
+          <h5 class="card-title">Rol</h5>
+          <p>
+            Scrum master de la iteracion del registro de usuarios en front-end y developer.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
         <img src="./assets/img-nosotros/Guadalupe-Osorio.jpg" class="card-img-top" alt="guadalupe-osorio">
         <div class="card-body">
           <h5 class="card-title" style="text-align: center;">Guadalupe Osorio</h5>
@@ -61,48 +146,64 @@
             encuentro en el desarrollo de una e-commerce que se llama "Dreamkey" enfocado en la belleza
             a usuarios que lo requieran. Estoy con un grupo de desarrolladores capaces de realizar este proyecto en
             donde se distribuye el trabajo en equipo aplicando la metodología SCRUM.
-            </p>
+          </p>
 
           <h5 class="card-title">Rol</h5>
           <p class="card-text" style="text-align: justify;">
             Encargada de crear un formulario para la creación del modelo (producto), componentes de formularios de
             Bootstrap, función Javascript, Alertas de Bootstrap </p>
-            
+
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="assets\img-nosotros\Emmanuel-Rojas.jpg" class="card-img-top" alt="EmmanuelRojas">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">Emmanuel Rojas Ramírez</h5>
+          <p class="card-text">
+            Ingeniero en Nanotecnología.</p>
+          <h5 class="card-title">Rol.</h5>
+          <p class="card-text">
+          A través de
+          DreamKey, trabajé como Scrum Master y Developer en la tarea de almacenar datos de usuario, usando Web Storage
+          API,
+          Bootstrap, Javascript y base de datos SQL. También, trabajé en la
+          experiencia de usuario(UX) con Figma.</p>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="./assets/img-nosotros/Hector-Valdez.jpg" class="card-img-top" alt="Imagen Hector Valdez">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">Hector Valdez</h5>
+          <p class="card-text">Soy desarrollador Full Stack, me apasiona combinar mis conocimientos en programación con
+            una visión estratégica para ayudar a los clientes y solucionar sus necesidades. Me motiva
+            aprender, innovar y desarrollar tecnología que genere un impacto.
+            Siempre busco nuevos desafíos que me permitan crecer profesionalmente.
+          </p>
+          <h5 class="card-title">Rol</h5>
+          <p class="card-text">Forme parte del equipo de desarrollo en el frontend de la pagima y como encargado en las
+            tareas del listado de Objetos y proyecto base </p>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="./assets/img-nosotros/Bruno-Velasco.jpg" class="card-img-top" alt="Bruno Velasco">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">Bruno Velasco</h5>
+          <p class="card-text">Nacido en Colima un 29 de junio de 1997, estudié la carrera de Ingeniería
+            Mecatrónica y me gradué por proyecto en el Cinvestav. Trabajé dos años y medio como
+            desarrollador de software en Continental R&D. Actualmente me encuentro en formación para ser
+            desarrollador Java Fullstack para Dreamkey.</p>
+          <h5 class="card-title">Rol</h5>
+          <p class="card-text">Rol: Encargado de la Base de Datos MySQL</p>
         </div>
       </div>
     </div>
   </div>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"

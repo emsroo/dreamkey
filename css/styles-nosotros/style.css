@@ -1,0 +1,148 @@
+html{
+    /* Variables */
+
+    /* Background color */
+    --bg-color: #DFE2EA;
+
+    /* Color para los botones */
+    --button-color: #FFD050;
+
+    /* Color para los parrafos*/
+    --p-color: #221132;
+
+    /* Otros colores */
+    --color1-color: #E8ABEB;
+    --color2-color: #EACCEB;
+    --color3-color: #D2CBCB;
+    --color4-color: #FFFFFF;
+    --color5-color: #000000;
+
+}
+
+@font-face {
+    font-family: 'MagallanesRegular';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MagallanesBold';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+
+body {
+    font-family: 'MagallanesRegular', sans-serif;
+    background-color: var(--bg-color);
+}
+
+.navbar .navbar-brand {
+    color: #FFFFFF; /* Naranja */
+    font-size: 20px; /* Tamaño de letra opcional */
+  }
+
+  
+.bg-dark-purple {
+    background-color: #221132;
+}
+
+.navbar .nav-link {
+    color: #ffffff; 
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00; 
+}
+
+.navbar .nav-link.active {
+    color: #00bcd4; 
+    font-weight: bold;
+}
+
+.navbar .form-control {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.navbar .form-control::placeholder {
+    color: #cccccc; 
+}
+
+.navbar .btn-outline-light {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #221132;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+p {
+    font-size: small;
+    color: var(--p-color);
+}
+
+.card {
+    background-color: var(--color2-color);
+
+}
+div.col div.card{
+    height: 100%;
+}
+.row{
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    justify-content: center; 
+}
+div.row div.col div.card div.card-body h5.card-title{
+    text-align: center;
+}
+
+@media (max-width: 768px){
+
+    div.card.text-center div.card-body{
+        text-align: justify;
+    }
+
+    div.card.text-center div.card-body h1{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    div.card.text-center div.card-body h5{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    div.card.text-center div.card-body p{
+
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    div.row div.col div.card div.card-body p{
+        font-size: 18px;
+    }
+
+    div.row div.col{
+        width: auto;
+    }
+
+}
+.col{
+    margin: 2%;
+}
+.card-img-top{
+    margin: auto;
+    display: flex;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+}
+

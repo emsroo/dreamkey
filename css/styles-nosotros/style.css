@@ -34,6 +34,15 @@ body {
     background-color: var(--bg-color);
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+p {
+    font-size: small;
+    color: var(--p-color);
+}
+
 .navbar .navbar-brand {
     color: #FFFFFF; /* Naranja */
     font-size: 20px; /* Tamaño de letra opcional */
@@ -42,6 +51,10 @@ body {
   
 .bg-dark-purple {
     background-color: #221132;
+}
+
+.bg-ligh-yellow{
+    background-color: var(--button-color);
 }
 
 .navbar .nav-link {
@@ -78,12 +91,4 @@ body {
     background-color: #ffcc00;
     border-color: #ffcc00;
     color: #221132;
-}
-h1, h2, h3, h4, h5, h6{
-    font-weight: bold;
-}
-
-p {
-    font-size: small;
-    color: var(--p-color);
 }

@@ -159,3 +159,66 @@ div.row div.col div.card div.card-body h5.card-title{
     transform: scale(1.1);
 }
 
+/* Estilos generales */
+.footer {
+    background-color: var(--color1-color); /* Color de fondo principal */
+    
+  }
+  
+  /* Colores personalizados */
+  .bg-dark-purple {
+    background-color: #2c0d47; 
+    height: 80px;/* Morado oscuro */
+  }
+  
+  .bg-light-purple {
+    background-color: var(--color1-color); /* Morado claro */
+  }
+  
+  .btn-yellow {
+    background-color: #ffc107; /* Amarillo */
+    color: #2c0d47; /* Texto morado oscuro */
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-yellow:hover {
+    background-color: #e0a800;
+  }
+  
+  .footer-link {
+    color: #2c0d47; 
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 600;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .nav {
+    display: inline-block;
+  }
+  
+  h5, h6 {
+   margin-top: 10px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .rounded-start {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .rounded-end {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }

@@ -1,5 +1,4 @@
 html{
-
     /* Variables */
 
     /* Background color */
@@ -92,3 +91,74 @@ p {
     border-color: #ffcc00;
     color: #221132;
 }
+<<<<<<< HEAD
+=======
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+p {
+    font-size: small;
+    color: var(--p-color);
+}
+
+.card {
+    background-color: var(--color2-color);
+
+}
+div.col div.card{
+    height: 100%;
+}
+.row{
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    justify-content: center; 
+}
+div.row div.col div.card div.card-body h5.card-title{
+    text-align: center;
+}
+
+@media (max-width: 768px){
+
+    div.card.text-center div.card-body{
+        text-align: justify;
+    }
+
+    div.card.text-center div.card-body h1{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    div.card.text-center div.card-body h5{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    div.card.text-center div.card-body p{
+
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    div.row div.col div.card div.card-body p{
+        font-size: 18px;
+    }
+
+    div.row div.col{
+        width: auto;
+    }
+
+}
+.col{
+    margin: 2%;
+}
+.card-img-top{
+    margin: auto;
+    display: flex;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+}
+
+>>>>>>> 91beebdb927381d3fe800e1c6ad36a359b037dcb

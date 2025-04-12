@@ -18,7 +18,7 @@
     <div class="container-fluid">
      
         <a class="navbar-brand" href="#">
-            <img src="logo.png" alt="Logo" width="40" height="40">
+            <img src="./assets/logo.jpeg" alt="Logo" width="60">
         </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -27,7 +27,7 @@
         </button>
   
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="membresiasDropdown" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">Membresías</a>
@@ -46,20 +46,21 @@
                     <a class="nav-link" href="#">Contacto</a>
                 </li>
             </ul>
-        
-            <form class="d-flex ms-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Empresas y servicios" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
+            <div class="container-fluid">
+              <form class="d-flex ms-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Empresas y servicios" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Buscar</button>
+              </form>
+            </div>
         </div>
     </div>
 </nav>
 
 
   <!--Descripción del proyecto-->
-  <div class="card text-center">
+  <div class="card-text-center">
     <div class="card-body">
-      <h1 class="card-title">Dreamkey</h1>
+      <h1 class="card-title1">Dreamkey</h1><br>
       <h3 class="card-title">Todo lo que tu belleza necesita, en un solo clic.</h3>
       <p class="card-text">Es una plataforma e-commerce enfocada en conectar usuarios con servicios de belleza
         mediante una membresía digital. Permitirá a los clientes: Explorar empresas y servicios afiliados. Reservar
@@ -77,129 +78,132 @@
     </div>
   </div>
   <!--Biografias de los integrantes en cards-->
-  <div class="row row-cols-4">
-    <div class="col">
-      <div class="card">
-        <img class="card-img-top" src="./assets/img-nosotros/Fredy-Alonzo.jpg"  alt="Fredy-Alonzo">
-        <div class="card-body">
-          <h5 class="card-title">Fredy Eduardo Alonzo Mondragón</h5>
-          <p class="card-text">Ingeniero en Robótica Computacional proactivo, resiliente y comprometido. Con
-            especialización en el Desarrollo FullStack. Cuento con habilidades de trabajo en equipo utilizando
-            metodologías ágiles y el marco de trabajo Scrum con el fin de desarrollar productos de software complejos
-            para satisfacer las necesidades de los clientes.
-          </p>
-          <h5 class="card-title">Rol</h5>
-          <p class="card-text">Encargado de la gestión de desarrollo de la estructura de navegación de la página, de los
-            servicios y controladores REST.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img class="card-img-top" src="./assets/img-nosotros/Ariadna-Fragoso.jpg" alt="Ariadna Fragoso">
-        <div class="card-body">
-          <h5 class="card-title">Ariadna Fragoso</h5>
-          <p class="card-text">Soy desarrolladora frontend. Actualmente, estoy trabajando en DreamKey, un proyecto
-            innovador de e-commerce en el que
-            colaboro con un equipo diverso. Este proyecto me permite integrar mis conocimientos en programación, creando
-            soluciones eficientes y escalables.</p>
-          <h5 class="card-title">Rol</h5>
-          <p class="subtituloText">Encargada del Spring Boot + Frontend + Deployment</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img class="card-img-top" src="./assets/img-nosotros/Gregorio-Galindo.jpg" alt=" Imagen de desarrollador Gregorio Galindo">
-        <div class="card-body">
-          <h5 class="card-title">Gregorio Galindo</h5>
-          <p class="card-text">Desarrollador web full-stack enfocado a la resolución de problemas complejos, análisis de
-            requerimientos y diseño centrado en el usuario.</p>
-          <h5 class="card-title">Rol</h5>
-          <p class="subtituloText">Encargado del desarrollo de pagina de contacto</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img class="card-img-top"src="./assets/img-nosotros/Adan-Olea.jpg"  alt="Adan Olea">
-        <div class="card-body">
-          <h5 class="card-title">Adán Olea</h5>
-          <p class="card-text">Ingeniero en computación enfocado en en desarrollo backend aunque estudio para llegar a
-            ser fullstack.
-            Soy un apasionado a la teconologia y me gusta estar aprendiendo sobre las nuevas novedades y actualizarme.
-            Tengo un año de experiencia laboral en IBM como Intern Software Developer en donde logre trabajar en grandes
-            proyectos de desarrollo y soporte. </p>
-          <h5 class="card-title">Rol</h5>
-          <p>
-            Scrum master de la iteracion del registro de usuarios en front-end y developer.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="./assets/img-nosotros/Guadalupe-Osorio.jpg" class="card-img-top" alt="guadalupe-osorio">
-        <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Guadalupe Osorio</h5>
-          <p class="card-text" style="text-align: justify;">Soy desarrolladora java fullstack, En este momento me
-            encuentro en el desarrollo de una e-commerce que se llama "Dreamkey" enfocado en la belleza
-            a usuarios que lo requieran. Estoy con un grupo de desarrolladores capaces de realizar este proyecto en
-            donde se distribuye el trabajo en equipo aplicando la metodología SCRUM.
-          </p>
+  <div class="container-lg">
 
-          <h5 class="card-title">Rol</h5>
-          <p class="card-text" style="text-align: justify;">
-            Encargada de crear un formulario para la creación del modelo (producto), componentes de formularios de
-            Bootstrap, función Javascript, Alertas de Bootstrap </p>
-
+    <div class="row  gy-4 row-cols-1 row-cols-2 row-cols-3 row-cols-4">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Fredy Alonzo</h5>
+            <img class="card-img-top" src="./assets/img-nosotros/Fredy-Alonzo.jpeg"  alt="Fredy-Alonzo"><br>
+            <p class="card-text">Ingeniero en Robótica Computacional proactivo, resiliente y comprometido. Con
+              especialización en el Desarrollo FullStack. Cuento con habilidades de trabajo en equipo utilizando
+              metodologías ágiles y el marco de trabajo Scrum con el fin de desarrollar productos de software complejos
+              para satisfacer las necesidades de los clientes.
+            </p>
+            <h5 class="card-title">Rol</h5>
+            <p class="card-text">Encargado de la gestión de desarrollo de la estructura de navegación de la página, de los
+              servicios y controladores REST.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="assets\img-nosotros\Emmanuel-Rojas.jpg" class="card-img-top" alt="EmmanuelRojas">
-        <div class="card-body">
-          <h5 class="card-title">Emmanuel Rojas Ramírez</h5>
-          <p class="card-text">
-            Ingeniero en Nanotecnología.</p>
-          <h5 class="card-title">Rol.</h5>
-          <p class="card-text">
-          A través de
-          DreamKey, trabajé como Scrum Master y Developer en la tarea de almacenar datos de usuario, usando Web Storage
-          API,
-          Bootstrap, Javascript y base de datos SQL. También, trabajé en la
-          experiencia de usuario(UX) con Figma.</p>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Ariadna Fragoso</h5>
+            <img class="card-img-top" src="./assets/img-nosotros/Ariadna-Fragoso.jpeg" alt="Ariadna Fragoso"><br>
+            <p class="card-text">Soy desarrolladora frontend. Actualmente, estoy trabajando en DreamKey, un proyecto
+              innovador de e-commerce en el que
+              colaboro con un equipo diverso. Este proyecto me permite integrar mis conocimientos en programación, creando
+              soluciones eficientes y escalables.</p>
+            <h5 class="card-title">Rol</h5>
+            <p class="subtituloText">Encargada del Spring Boot + Frontend + Deployment</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="./assets/img-nosotros/Hector-Valdez.jpg" class="card-img-top" alt="Imagen Hector Valdez">
-        <div class="card-body">
-          <h5 class="card-title">Hector Valdez</h5>
-          <p class="card-text">Soy desarrollador Full Stack, me apasiona combinar mis conocimientos en programación con
-            una visión estratégica para ayudar a los clientes y solucionar sus necesidades. Me motiva
-            aprender, innovar y desarrollar tecnología que genere un impacto.
-            Siempre busco nuevos desafíos que me permitan crecer profesionalmente.
-          </p>
-          <h5 class="card-title">Rol</h5>
-          <p class="card-text">Forme parte del equipo de desarrollo en el frontend de la pagima y como encargado en las
-            tareas del listado de Objetos y proyecto base </p>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Gregorio Galindo</h5>
+            <img class="card-img-top" src="./assets/img-nosotros/gregorio.jpeg" alt=" Imagen de desarrollador Gregorio Galindo"><br>
+            <p class="card-text">Desarrollador web full-stack enfocado a la resolución de problemas complejos, análisis de
+              requerimientos y diseño centrado en el usuario.</p>
+            <h5 class="card-title">Rol</h5>
+            <p class="subtituloText">Encargado del desarrollo de pagina de contacto</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="./assets/img-nosotros/Bruno-Velasco.jpg" class="card-img-top" alt="Bruno Velasco">
-        <div class="card-body">
-          <h5 class="card-title">Bruno Velasco</h5>
-          <p class="card-text">Nacido en Colima un 29 de junio de 1997, estudié la carrera de Ingeniería
-            Mecatrónica y me gradué por proyecto en el Cinvestav. Trabajé dos años y medio como
-            desarrollador de software en Continental R&D. Actualmente me encuentro en formación para ser
-            desarrollador Java Fullstack para Dreamkey.</p>
-          <h5 class="card-title">Rol</h5>
-          <p class="card-text">Rol: Encargado de la Base de Datos MySQL</p>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Adán Olea</h5>
+            <img class="card-img-top" src="./assets/img-nosotros/Adan-Olea.jpeg"  alt="Adan Olea"><br>
+            <p class="card-text">Ingeniero en computación enfocado en en desarrollo backend aunque estudio para llegar a
+              ser fullstack.
+              Soy un apasionado a la teconologia y me gusta estar aprendiendo sobre las nuevas novedades y actualizarme.
+              Tengo un año de experiencia laboral en IBM como Intern Software Developer en donde logre trabajar en grandes
+              proyectos de desarrollo y soporte. </p>
+            <h5 class="card-title">Rol</h5>
+            <p>
+              Scrum master de la iteracion del registro de usuarios en front-end y developer.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Guadalupe Osorio</h5>
+            <img src="./assets/img-nosotros/Guadalupe-Osorio.jpeg" class="card-img-top" alt="guadalupe-osorio"><br>
+            <p class="card-text" style="text-align: justify;">Soy desarrolladora java fullstack, En este momento me
+              encuentro en el desarrollo de una e-commerce que se llama "Dreamkey" enfocado en la belleza
+              a usuarios que lo requieran. Estoy con un grupo de desarrolladores capaces de realizar este proyecto en
+              donde se distribuye el trabajo en equipo aplicando la metodología SCRUM.
+            </p>
+  
+            <h5 class="card-title">Rol</h5>
+            <p class="card-text" style="text-align: justify;">
+              Encargada de crear un formulario para la creación del modelo (producto), componentes de formularios de
+              Bootstrap, función Javascript, Alertas de Bootstrap </p>
+  
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Emmanuel Rojas</h5>
+            <img src="assets/img-nosotros/Emmanuel-Rojas.jpeg" class="card-img-top" alt="EmmanuelRojas"><br>
+            <p class="card-text">
+              Ingeniero en Nanotecnología.</p>
+            <h5 class="card-title">Rol.</h5>
+            <p class="card-text">
+            A través de
+            DreamKey, trabajé como Scrum Master y Developer en la tarea de almacenar datos de usuario, usando Web Storage
+            API,
+            Bootstrap, Javascript y base de datos SQL. También, trabajé en la
+            experiencia de usuario(UX) con Figma.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Hector Valdez</h5>
+            <img src="./assets/img-nosotros/Hector-Valdez.jpeg" class="card-img-top" alt="Imagen Hector Valdez"><br>
+            <p class="card-text">Soy desarrollador Full Stack, me apasiona combinar mis conocimientos en programación con
+              una visión estratégica para ayudar a los clientes y solucionar sus necesidades. Me motiva
+              aprender, innovar y desarrollar tecnología que genere un impacto.
+              Siempre busco nuevos desafíos que me permitan crecer profesionalmente.
+            </p>
+            <h5 class="card-title">Rol</h5>
+            <p class="card-text">Forme parte del equipo de desarrollo en el frontend de la pagima y como encargado en las
+              tareas del listado de Objetos y proyecto base </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Bruno Velasco</h5>
+            <img src="./assets/img-nosotros/Bruno-Velasco.jpeg" class="card-img-top" alt="Bruno Velasco"><br>
+            <p class="card-text">Nacido en Colima un 29 de junio de 1997, estudié la carrera de Ingeniería
+              Mecatrónica y me gradué por proyecto en el Cinvestav. Trabajé dos años y medio como
+              desarrollador de software en Continental R&D. Actualmente me encuentro en formación para ser
+              desarrollador Java Fullstack para Dreamkey.</p>
+            <h5 class="card-title">Rol</h5>
+            <p class="card-text">Rol: Encargado de la Base de Datos MySQL</p>
+          </div>
         </div>
       </div>
     </div>

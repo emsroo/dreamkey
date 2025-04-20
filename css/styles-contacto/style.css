@@ -1,0 +1,96 @@
+html{
+    /* Variables */
+
+    /* Background color */
+    --bg-color: #DFE2EA;
+
+    /* Color para los botones */
+    --button-color: #FFD050;
+
+    /* Color para los parrafos*/
+    --p-color: #221132;
+
+    /* Otros colores */
+    --color1-color: #E8ABEB;
+    --color2-color: #EACCEB;
+    --color3-color: #D2CBCB;
+    --color4-color: #FFFFFF;
+    --color5-color: #000000;
+
+}
+
+
+body{
+
+    background-color: #DFE2EA;
+}
+
+@font-face {
+    font-family: 'MagallanesRegular';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MagallanesBold';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+
+ .card-text{
+    font-family: 'MagallanesRegular', sans-serif;
+    text-align:left;
+   
+}
+
+
+.navbar .navbar-brand {
+    color: #FFFFFF; /* Naranja */
+    font-size: 20px; /* Tamaño de letra opcional */
+  }
+
+  
+.bg-dark-purple {
+    background-color: #221132;
+}
+
+.bg-ligh-yellow{
+    background-color: var(--button-color);
+}
+
+.navbar .nav-link {
+    color: #ffffff; 
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00; 
+}
+
+.navbar .nav-link.active {
+    color: #00bcd4; 
+    font-weight: bold;
+}
+
+.navbar .form-control {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.navbar .form-control::placeholder {
+    color: #cccccc; 
+}
+
+.navbar .btn-outline-light {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #221132;
+}
+
+img {
+    mix-blend-mode: multiply;
+  }

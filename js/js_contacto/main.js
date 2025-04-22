@@ -74,6 +74,7 @@ btnEnviar.addEventListener("click", function(event){
 
     event.preventDefault();
 
+    enviarCorreo();
     //Esto es un Bandera, al ser true permite enviar los datos
     let isValid = true;
 

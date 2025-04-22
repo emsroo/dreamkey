@@ -45,9 +45,8 @@ p {
 .navbar .navbar-brand {
     color: #FFFFFF; /* Naranja */
     font-size: 20px; /* Tamaño de letra opcional */
-  }
+}
 
-  
 .bg-dark-purple {
     background-color: #221132;
 }
@@ -100,16 +99,35 @@ p {
     color: var(--p-color);
 }
 
+.card-text-center{
+    margin: 30px 110px 30px 110px;
+    text-align: center;
+}
+
+.card-text{
+    text-align: justify;
+}
+
 .card {
     background-color: var(--color2-color);
-
 }
+
 div.col div.card{
     height: 100%;
 }
+.col{
+    margin: 2%;
+}
+.card-img-top{
+    margin: auto;
+    display: flex;
+    border-radius: 50%;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+}
 .row{
-    width: 90%;
-    margin: 5%;
+    max-width: 100%;
     display: flex;
     justify-content: center; 
 }
@@ -118,6 +136,10 @@ div.row div.col div.card div.card-body h5.card-title{
 }
 
 @media (max-width: 768px){
+    .card-text-center{
+        margin: 15px 15px 40px 15px;
+        text-align: center;
+    }
 
     div.card.text-center div.card-body{
         text-align: justify;
@@ -140,23 +162,20 @@ div.row div.col div.card div.card-body h5.card-title{
     }
 
     div.row div.col div.card div.card-body p{
-        font-size: 18px;
+        font-size: 15px;
     }
 
     div.row div.col{
-        width: auto;
+        display: flex;
+        width: 45%;
     }
-
-}
-.col{
-    margin: 2%;
-}
-.card-img-top{
-    margin: auto;
-    display: flex;
-}
-.card-img-top:hover{
-    transform: scale(1.1);
+    .card-img-top{
+        border-radius: 50%;
+        width: 70%;
+    }
+    .card-img-top:hover{
+        transform: scale(1.2);
+    }
 }
 
 /* Estilos generales */
@@ -232,3 +251,39 @@ div.row div.col div.card div.card-body h5.card-title{
 
     text-align:justify;
   }
+@media (max-width: 320px){
+
+    .card-text-center{
+        margin: 10px;
+        text-align: center;
+    }
+    .card-title1{
+        font-size: 17px;
+    }
+    .card-title{
+        font-size: 13px;
+    }
+    .card-text{
+        text-align: justify;
+        font-size: 10px;
+    }
+    div.row div.col div.card div.card-body p{
+        font-size: 8px;
+    }
+    .row{
+        display: flex;
+        margin: auto;
+        width: 200%;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .card-img-top{
+        border-radius: 50%;
+        width: 100%;
+        justify-content: center;
+    }
+    .card-img-top:hover{
+        transform: scale(1.2);
+    }
+}

@@ -12,50 +12,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-purple">
-        <div class="container-fluid">
-
-            <a class="navbar-brand" href="#">
-                <img src="./assets/dreamkeyLogo.png" alt="Logo" width="70" height="70">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="membresiasDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Membresías</a>
-                        <ul class="dropdown-menu" aria-labelledby="membresiasDropdown">
-                            <li><a class="dropdown-item" href="#">Tipo 1</a></li>
-                            <li><a class="dropdown-item" href="#">Tipo 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Afiliados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contacto.html">Contacto</a>
-                    </li>
-                </ul>
-
-                <form class="d-flex ms-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Empresas y servicios"
-                        aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
-
-
-  
-    </nav>
+    <div id="header"></div>
 
 
     <section class="form-section">
@@ -98,16 +55,30 @@
                   </div>
                 </form>
               </div>
-              <div id="error-msg"> <!-- Aqui se muestra información de los campos invalidos -->
-                                
-              </div>
             </div>
           </div>
         </div>
       </section>
       
     
-
+    <div id="footer"></div>
+    
+    <script>
+        //Cargar el conetenido de header
+    fetch("navTemplete.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+         });
+    </script>
+    <script>
+        //Cargar el conetenido de footer
+    fetch("footerTemplate.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+         });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>

@@ -10,9 +10,6 @@ const txtMessage = document.getElementById("message");
 //Variable de acceso al elemento del boton enviar
 const btnEnviar = document.getElementById("btnEnviar");
 
-//Variable para almacenar los elementos de la tabla
-let datos = new Array(); //[]
-
 //Quitamos los espacios al inicio del nombre y lo hacemos todo mayusculas
 txtName.addEventListener("blur", function(event){
     event.preventDefault();
@@ -70,10 +67,32 @@ function validarCorreo(){
     
 }//validarCorreo
 
+function mostrarError(mensajeError) {
+    let formulario = document.getElementsByClassName("row justify-content-center").item(0);
+    
+    formulario.insertAdjacentHTML("afterend", 
+        `
+        <div class="alert alert-danger" role="alert" id="error-msg">
+            ${mensajeError}
+        </div>
+        `
+    );
+}
+
+function ocultarError() {
+    try {
+        error_msg = document.getElementById("error-msg");
+        error_msg.remove();
+      } catch (error) {
+        
+      }
+}
+
 btnEnviar.addEventListener("click", function(event){
+    let mensajeError = "";
+    ocultarError();
 
     event.preventDefault();
-
 
     //Esto es un Bandera, al ser true permite enviar los datos
     let isValid = true;
@@ -86,24 +105,28 @@ btnEnviar.addEventListener("click", function(event){
     //Validmos que la longitud del valor del nombre sea mayor a 1
     if(txtName.value.length < 1){
         isValid = false;
+        mensajeError += "<p>El nombre es muy corto</p>";
     }//length<3
-
+    
     //Validmos que la longitud del valor del email sea mayor a 1
     if(! validarCorreo()){
         isValid = false;
+        mensajeError += "<p>El correo es invalido</p>";
     }//length<3
-
+    
     if(! validarNumero()){
         isValid = false;
+        mensajeError += "<p>El numero telefónico es invalido</p>";
     }//validarNumero
-
+    
     //Validmos que la longitud del valor del email sea mayor a 1
     if(txtMessage.value.length < 1){
         isValid = false;
+        mensajeError += "<p>El mensaje es muy corto</p>";
     }//length<3
 
     if(isValid){
-        
+
         let elemento = {
                         "Nombre" : txtName.value,
                         "Email" : txtEmail.value,
@@ -125,11 +148,13 @@ btnEnviar.addEventListener("click", function(event){
         txtName.focus();
 
         Swal.fire({
-            title: "Respuestas guardadas",
+            title: "Mensaje Enviado!",
             //text: "You clicked the button!",
             icon: "success"
         });
         
+    } else {
+        mostrarError(mensajeError);
     }
 
 });//btnEnviar

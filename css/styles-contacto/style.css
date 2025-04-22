@@ -19,6 +19,12 @@ html{
 
 }
 
+
+body{
+
+    background-color: #DFE2EA;
+}
+
 @font-face {
     font-family: 'MagallanesRegular';
     src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
@@ -28,19 +34,12 @@ html{
     src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
 }
 
-body {
+ .card-text{
     font-family: 'MagallanesRegular', sans-serif;
-    background-color: var(--bg-color);
+    text-align:left;
+   
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-weight: bold;
-}
-
-p {
-    font-size: small;
-    color: var(--p-color);
-}
 
 .navbar .navbar-brand {
     color: #FFFFFF; /* Naranja */
@@ -91,72 +90,10 @@ p {
     border-color: #ffcc00;
     color: #221132;
 }
-h1, h2, h3, h4, h5, h6{
-    font-weight: bold;
-}
 
-p {
-    font-size: small;
-    color: var(--p-color);
-}
 
-.card {
-    background-color: var(--color2-color);
-
-}
-div.col div.card{
-    height: 100%;
-}
-.row{
-    width: 90%;
-    margin: 5%;
-    display: flex;
-    justify-content: center; 
-}
-div.row div.col div.card div.card-body h5.card-title{
-    text-align: center;
-}
-
-@media (max-width: 768px){
-
-    div.card.text-center div.card-body{
-        text-align: justify;
-    }
-
-    div.card.text-center div.card-body h1{
-        text-align: center;
-        font-size: 30px;
-    }
-
-    div.card.text-center div.card-body h5{
-        text-align: center;
-        font-size: 25px;
-    }
-
-    div.card.text-center div.card-body p{
-
-        text-align: justify;
-        font-size: 18px;
-    }
-
-    div.row div.col div.card div.card-body p{
-        font-size: 18px;
-    }
-
-    div.row div.col{
-        width: auto;
-    }
-
-}
-.col{
-    margin: 2%;
-}
-.card-img-top{
-    margin: auto;
-    display: flex;
-}
-.card-img-top:hover{
-    transform: scale(1.1);
+div.card-body p.card-text{
+    display: block;
 }
 
 /* Estilos generales */
@@ -185,7 +122,7 @@ div.row div.col div.card div.card-body h5.card-title{
     font-size: 16px;
     cursor: pointer;
   }
-  
+
   .btn-yellow:hover {
     background-color: #e0a800;
   }
@@ -223,12 +160,6 @@ div.row div.col div.card div.card-body h5.card-title{
     border-bottom-right-radius: 20px;
   }
 
-
-  .card-title{
-
-    text-align:center;
-  }
-  div.div.card-body.card-title.card-text{
-
-    text-align:justify;
+  .span{
+    display: block;
   }

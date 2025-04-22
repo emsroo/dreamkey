@@ -10,6 +10,9 @@ const txtMessage = document.getElementById("message");
 //Variable de acceso al elemento del boton enviar
 const btnEnviar = document.getElementById("btnEnviar");
 
+// Cuadro que muestra los errores en los campos de datos
+const cuadroDeAlerta = document.getElementById("error-msg");
+
 //Variable para almacenar los elementos de la tabla
 let datos = new Array(); //[]
 
@@ -69,32 +72,30 @@ function validarCorreo(){
     
 }//validarCorreo
 
+function validarMensaje() {
+    if (txtMessage.value.trim() === "") {
+      return true;
+    } 
+    return false;
+}
+
 function mostrarError(mensajeError) {
-    let formulario = document.getElementsByClassName("row justify-content-center").item(0);
-    
-    formulario.insertAdjacentHTML("afterend", 
+    cuadroDeAlerta.insertAdjacentHTML("beforeend", 
         `
-        <div class="alert alert-danger" role="alert" id="error-msg">
-            ${mensajeError}
+        <div class="alert alert-danger" role="alert">
+        ${mensajeError}
         </div>
         `
     );
 }
 
-function ocultarError() {
-    try {
-        error_msg = document.getElementById("error-msg");
-        error_msg.remove();
-      } catch (error) {
-        
-      }
-}
-
 btnEnviar.addEventListener("click", function(event){
-    let mensajeError = "";
-    ocultarError();
-
     event.preventDefault();
+    
+    let mensajeError = "";
+    
+    // Limpia el mensaje de error
+    cuadroDeAlerta.innerHTML = "";
 
     //Esto es un Bandera, al ser true permite enviar los datos
     let isValid = true;
@@ -126,6 +127,7 @@ btnEnviar.addEventListener("click", function(event){
     if(txtMessage.value.length < 1){
         isValid = false;
         mensajeError += "<p>El mensaje es muy corto</p>";
+        //txtMessage.style.borderColor = "red";
     }//length<3
 
     //Marcar errores en color rojo 
@@ -143,6 +145,12 @@ btnEnviar.addEventListener("click", function(event){
         txtNumber.style.borderColor = "red";
       } else {
         txtNumber.style.borderColor = "";
+      }
+
+    if (!validarMensaje()) {
+        txtMessage.style.borderColor = "";
+      } else {
+        txtMessage.style.borderColor = "red";
       }
 
     if(isValid){

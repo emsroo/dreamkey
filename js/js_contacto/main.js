@@ -1,27 +1,11 @@
 //Variable de acceso al elemento del nombre
-const txtName = document.getElementById("nombre");
+const txtName = document.getElementById("nom");
 //Variable de acceso al elemento al correo
 const txtEmail = document.getElementById("email");
 //Variable de acceso al elemento del numero de telefono
 const txtNumber = document.getElementById("telefono");
 //Variable de acceso al elemento del mensaje
-const txtMessage = document.getElementById("mensaje");
-
-//Variables de acceso a los lementos de alerta y texto de Name
-const alertValidacionesName = document.getElementById("alertValidacionesName");
-const alertValidacionesTextoName = document.getElementById("alertValidacionesTextoName");
-
-//Variables de acceso a los lementos de alerta y texto de Email
-const alertValidacionesEmail = document.getElementById("alertValidacionesEmail");
-const alertValidacionesTextoEmail = document.getElementById("alertValidacionesTextoEmail");
-
-//Variables de acceso a los lementos de alerta y texto de Number
-const alertValidacionesNumber = document.getElementById("alertValidacionesNumber");
-const alertValidacionesTextoNumber = document.getElementById("alertValidacionesTextoNumber");
-
-//Variables de acceso a los lementos de alerta y texto de Mensaje
-const alertValidacionesMessage = document.getElementById("alertValidacionesMessage");
-const alertValidacionesTextoMessage = document.getElementById("alertValidacionesTextoMessage");
+const txtMessage = document.getElementById("message");
 
 //Variable de acceso al elemento del boton enviar
 const btnEnviar = document.getElementById("btnEnviar");

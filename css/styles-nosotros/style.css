@@ -222,3 +222,13 @@ div.row div.col div.card div.card-body h5.card-title{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
+
+  .card-title{
+
+    text-align:center;
+  }
+  div.div.card-body.card-title.card-text{
+
+    text-align:justify;
+  }

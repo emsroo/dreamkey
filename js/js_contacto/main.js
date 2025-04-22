@@ -28,7 +28,7 @@ txtEmail.addEventListener("blur", function(event){
 //Quitamos los espacios al inicio del numero y lo seteamos a 10 digitos
 txtNumber.addEventListener("blur", function(event){
     event.preventDefault();
-    txtNumber.value = txtNumber.value.trim();
+    txtNumber.value = txtNumber.value.trim().slice(0,10);
 });
 
 //Quitamos los espacios al inicio del mensaje
@@ -37,26 +37,27 @@ txtMessage.addEventListener("blur", function(event){
     txtMessage.value = txtMessage.value.trim();
 });
 
-
-function validarNombre(){
-    const nombreValido = /^[a-zA-Z\s]+$/;
-    if( nombreValido.test(txtName.value)){
-        return true;
-    }
-    return false;
-}
-
 function validarNumero(){
 
-    const regex = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$");
+    //Condicion para saber si la longitud es menor o igual a 0, regresamos un falso
+    if(txtNumber.value.trim().length<=0){
+        return false; //Tener en cuenta que el "return" una vez se ejecuta, sale directamente de la funcion "validarCantidad"
+    }//length<=0
 
-    if( regex.test(txtNumber.value)){
-        return true;
+    //Condicion para validar que sea un numero
+    if(isNaN(txtNumber.value)){
+        return false;
+    }//isNan
+
+    //Condicion para validar si la cantidad es mayor a 0, convirtiendolo a un numero
+    if(Number(txtNumber.value)<=0){
+        return false;
     }
-    return false;
+
+    //Si tiene algo, regresa verdadero
+    return true;
 
 }//validarNumero
-
 
 function validarCorreo(){
     let expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
@@ -69,34 +70,11 @@ function validarCorreo(){
     
 }//validarCorreo
 
-function mostrarError(mensajeError) {
-    let formulario = document.getElementsByClassName("row justify-content-center").item(0);
-    
-    formulario.insertAdjacentHTML("afterend", 
-        `
-        <div class="alert alert-danger" role="alert" id="error-msg">
-            ${mensajeError}
-        </div>
-        `
-    );
-}
-
-function ocultarError() {
-    try {
-        error_msg = document.getElementById("error-msg");
-        error_msg.remove();
-      } catch (error) {
-        
-      }
-}
-
 btnEnviar.addEventListener("click", function(event){
-    let mensajeError = "";
-    ocultarError();
 
     event.preventDefault();
 
-    enviarCorreo();
+
     //Esto es un Bandera, al ser true permite enviar los datos
     let isValid = true;
 
@@ -108,46 +86,24 @@ btnEnviar.addEventListener("click", function(event){
     //Validmos que la longitud del valor del nombre sea mayor a 1
     if(txtName.value.length < 1){
         isValid = false;
-        mensajeError += "<p>El nombre es muy corto</p>";
     }//length<3
-    
+
     //Validmos que la longitud del valor del email sea mayor a 1
-    
     if(! validarCorreo()){
         isValid = false;
-        mensajeError += "<p>El correo es invalido</p>";
     }//length<3
-    
+
     if(! validarNumero()){
         isValid = false;
-        mensajeError += "<p>El numero telefónico es invalido</p>";
     }//validarNumero
-    
+
     //Validmos que la longitud del valor del email sea mayor a 1
     if(txtMessage.value.length < 1){
         isValid = false;
-        mensajeError += "<p>El mensaje es muy corto</p>";
     }//length<3
 
-    //Marcar errores en color rojo 
-    if (!validarNombre()) {
-        txtName.style.borderColor = "red";
-      } else {
-        txtName.style.borderColor = "";
-      }
-    if (!validarCorreo()) {
-        txtEmail.style.borderColor = "red";
-      } else {
-        txtEmail.style.borderColor = "";
-      }
-    if (!validarNumero()) {
-        txtNumber.style.borderColor = "red";
-      } else {
-        txtNumber.style.borderColor = "";
-      }
-
     if(isValid){
-
+        
         let elemento = {
                         "Nombre" : txtName.value,
                         "Email" : txtEmail.value,
@@ -174,8 +130,6 @@ btnEnviar.addEventListener("click", function(event){
             icon: "success"
         });
         
-    } else {
-        mostrarError(mensajeError);
     }
 
 });//btnEnviar

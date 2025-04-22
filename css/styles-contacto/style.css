@@ -34,7 +34,7 @@ body{
     src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
 }
 
- .card-text{
+ .form-section{
     font-family: 'MagallanesRegular', sans-serif;
     text-align:left;
    

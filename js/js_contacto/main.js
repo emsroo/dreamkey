@@ -10,6 +10,9 @@ const txtMessage = document.getElementById("message");
 //Variable de acceso al elemento del boton enviar
 const btnEnviar = document.getElementById("btnEnviar");
 
+//Variable para almacenar los elementos de la tabla
+let datos = new Array(); //[]
+
 //Quitamos los espacios al inicio del nombre y lo hacemos todo mayusculas
 txtName.addEventListener("blur", function(event){
     event.preventDefault();
@@ -121,7 +124,7 @@ btnEnviar.addEventListener("click", function(event){
         txtName.focus();
 
         Swal.fire({
-            title: "Mensaje Enviado!",
+            title: "Respuestas guardadas",
             //text: "You clicked the button!",
             icon: "success"
         });

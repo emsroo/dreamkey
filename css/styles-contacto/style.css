@@ -123,6 +123,30 @@ div.card-body p.card-text{
     cursor: pointer;
   }
 
+
+  .form-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    background-color: #e5eaf4;
+    border: none;
+    padding: 20px;
+  }
+  .btn-custom {
+    background-color: #ffce00;
+    border: none;
+    color: #2b2a4c;
+    font-weight: bold;
+  }
+  
+  .form-control:focus {
+  border-color: blue;
+  box-shadow: 0 0 0 0.25rem rgba(0, 89, 255, 0.25);
+  }
+  
   .btn-yellow:hover {
     background-color: #e0a800;
   }

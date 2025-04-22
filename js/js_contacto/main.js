@@ -72,6 +72,13 @@ function validarCorreo(){
     
 }//validarCorreo
 
+function validarMensaje() {
+    if (txtMessage.value.trim() === "") {
+      return true;
+    } 
+    return false;
+}
+
 function mostrarError(mensajeError) {
     cuadroDeAlerta.insertAdjacentHTML("beforeend", 
         `
@@ -120,6 +127,7 @@ btnEnviar.addEventListener("click", function(event){
     if(txtMessage.value.length < 1){
         isValid = false;
         mensajeError += "<p>El mensaje es muy corto</p>";
+        //txtMessage.style.borderColor = "red";
     }//length<3
 
     //Marcar errores en color rojo 
@@ -137,6 +145,12 @@ btnEnviar.addEventListener("click", function(event){
         txtNumber.style.borderColor = "red";
       } else {
         txtNumber.style.borderColor = "";
+      }
+
+    if (!validarMensaje()) {
+        txtMessage.style.borderColor = "";
+      } else {
+        txtMessage.style.borderColor = "red";
       }
 
     if(isValid){

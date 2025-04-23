@@ -34,7 +34,7 @@ body{
     src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
 }
 
- .card-text{
+ .form-section{
     font-family: 'MagallanesRegular', sans-serif;
     text-align:left;
    
@@ -91,10 +91,94 @@ body{
     color: #221132;
 }
 
-
-div.card-body p.card-text{
-    display: block;
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
 }
+
+p {
+  font-size: small;
+  color: var(--p-color);
+}
+
+.card-text-center{
+  margin: 30px 110px 30px 110px;
+  text-align: center;
+}
+
+.card-text{
+  text-align: justify;
+}
+
+.card {
+  background-color: var(--color2-color);
+}
+
+div.col div.card{
+  height: 100%;
+}
+.col{
+  margin: 2%;
+}
+.card-img-top{
+  margin: auto;
+  display: flex;
+  border-radius: 50%;
+}
+.card-img-top:hover{
+  transform: scale(1.1);
+}
+.row{
+  max-width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+div.row div.col div.card div.card-body h5.card-title{
+  text-align: center;
+}
+
+@media (max-width: 768px){
+  .card-text-center{
+      margin: 15px 15px 40px 15px;
+      text-align: center;
+  }
+
+  div.card.text-center div.card-body{
+      text-align: justify;
+  }
+
+  div.card.text-center div.card-body h1{
+      text-align: center;
+      font-size: 30px;
+  }
+
+  div.card.text-center div.card-body h5{
+      text-align: center;
+      font-size: 25px;
+  }
+
+  div.card.text-center div.card-body p{
+
+      text-align: justify;
+      font-size: 18px;
+  }
+
+  div.row div.col div.card div.card-body p{
+      font-size: 15px;
+  }
+
+  div.row div.col{
+      display: flex;
+      width: 45%;
+  }
+  .card-img-top{
+      border-radius: 50%;
+      width: 70%;
+  }
+  .card-img-top:hover{
+      transform: scale(1.2);
+  }
+}
+
 
 /* Estilos generales */
 .footer {

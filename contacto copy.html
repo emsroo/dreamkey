@@ -55,6 +55,7 @@
                   </div>
                 </form>
               </div>
+              <div id="error-msg"> <!-- Aqui se muestra información de los campos invalidos -->
             </div>
           </div>
         </div>
@@ -84,6 +85,16 @@
         crossorigin="anonymous"></script>
     <script src="./js/js_contacto/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "Y_DWBuz5qjaerjzbZ",
+           });
+        })();
+    </script>
 </body>
 
 </html>

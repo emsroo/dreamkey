@@ -168,6 +168,13 @@ btnEnviar.addEventListener("click", function(event){
         //Imprimimos los datos en la pantalla
         //console.log(datos);
 
+        emailjs.send("service_3jeqyxk","template_6swb2ia",{
+            name: txtName.value,
+            email: txtEmail.value,
+            number: txtNumber.value,
+            message: txtMessage.value,
+        });
+
         //Con las siguientes dos lineas limpiamos los valores de los datos
         txtName.value="";
         txtEmail.value="";

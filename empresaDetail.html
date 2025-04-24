@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>detallesEmpresas</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm">
+                <div class="card mb-3">
+                    <div class="row g-0">
+
+                        <div class="col-md-2">
+                            <div class="row mb-2">
+                                <div class="col-sm"><img src="./assets/img-empresasDetail/img_1.webp" alt="img_1" style="width: 100%; height: 100%;"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm"><img src="./assets/img-empresasDetail/img_2.webp" alt="img_2" style="width: 100%; height: 100%;"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm"><img src="./assets/img-empresasDetail/img_3.webp" alt="img_3" style="width: 100%; height: 100%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" style="align-content: center;">
+                            <img src="./assets/img-empresasDetail/Imagen_1.webp" class="img-fluid rounded-start"
+                                alt="empresasDetail">
+                        </div>
+
+                        <div class="col-md-6" style="align-content: center;">
+                            <div class="card-body">
+                                <h3 class="card-title">Atelier Ross Melgar</h5>
+                                    <h5>Spa & salón de belleza
+                                </h3>
+                                <p class="card-text" style="font-size: large;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+                                    harum, ea nihil accusantium pariatur repellendus voluptatem sequi ut ad sunt
+                                    nesciunt nemo officiis. Eius harum perspiciatis ipsum totam autem excepturi dolores
+                                    consectetur. Ex omnis laboriosam perferendis iste, alias dicta dolorum repudiandae.
+                                    Quos, excepturi. Amet natus cum corporis ex aliquid impedit!</p>
+                                <hr>
+                                <h5>Servicios</h5   >
+                                <div class="row" style="text-align: center;">
+                                    <div class="col-sm">Spa</div>
+                                    <div class="col-sm">Corte</div>
+                                    <div class="col-sm">Masaje</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            Rating & Reviews
+        </div>
+
+        <div class="row">
+            <div class="col-sm" style="text-align: left;">
+                All Reviews
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        //Cargar el conetenido de header
+        fetch("navTemplete.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+    <script>
+        //Cargar el conetenido de footer
+        fetch("footerTemplate.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -2,59 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-<link rel="stylesheet" href="./css/styles-nosotros/style.css">
-  <title>Nosotros</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles-nosotros/style.css">
+    <title>Nosotros</title>
 </head>
 
 <body>
   <!--Navbar-->
 
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-purple">
-    <div class="container-fluid">
-     
-        <a class="navbar-brand" href="#">
-            <img src="./assets/logo.jpeg" alt="Logo" width="60">
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="membresiasDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Membresías</a>
-                    <ul class="dropdown-menu" aria-labelledby="membresiasDropdown">
-                        <li><a class="dropdown-item" href="#">Tipo 1</a></li>
-                        <li><a class="dropdown-item" href="#">Tipo 2</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Afiliados</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
-            <div class="container-fluid">
-              <form class="d-flex ms-3" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Empresas y servicios" aria-label="Search">
-                  <button class="btn btn-outline-light" type="submit">Buscar</button>
-              </form>
-            </div>
-        </div>
-    </div>
-</nav>
+  <div id="header"></div>
+  <h6>Empresas afiliadas</h6>
 
 
   <!--Descripción del proyecto-->
@@ -209,30 +169,24 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="container-fluid">
-      <div class="row align-items-center" style="padding-top: 12px;padding-bottom: 12px;">
-        <div class="col-sm-4 text-white text-center bg-dark-purple">
-          <h5 class="">Únete a DreamKey hoy y <br> consiéntete como mereces.</h5>
-        </div>
-  
-        <div class="col-sm-2 text-center bg-dark-purple rounded-end">
-          <button class="btn btn-yellow align-items-center">Suscríbete aquí</button>
-        </div>
-  
-        <div class="col-sm-6 text-center bg-light-purple">
-            <h6>DREAMKEY</h6>
-          <nav>
-            <a href="#" class="footer-link">Nosotros</a>
-            <a href="#" class="footer-link">Afiliados</a>
-            <a href="#" class="footer-link">Membresías</a>
-            <a href="#" class="footer-link">Inicio</a>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer"></div>
 
+    <script>
+          //Cargar el conetenido de header
+      fetch("navTemplete.html")
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById("header").innerHTML = data;
+          });
+      </script>
+      <script>
+          //Cargar el conetenido de footer
+      fetch("footerTemplate.html")
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById("footer").innerHTML = data;
+          });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>

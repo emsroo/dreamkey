@@ -134,7 +134,7 @@ div.col div.card{
 div.row div.col div.card div.card-body h5.card-title{
     text-align: center;
 }
-
+/*
 @media (max-width: 768px){
     .card-text-center{
         margin: 15px 15px 40px 15px;
@@ -177,7 +177,7 @@ div.row div.col div.card div.card-body h5.card-title{
         transform: scale(1.2);
     }
 }
-
+*/
 /* Estilos generales */
 .footer {
     background-color: var(--color1-color); /* Color de fondo principal */

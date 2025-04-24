@@ -20,15 +20,9 @@ html{
 }
 
 
-<<<<<<< HEAD
-body{
-    font-family: 'MagallanesRegular', sans-serif;
-    background-color: #DFE2EA;
-=======
 body {
   font-family: 'MagallanesRegular', sans-serif;
   background-color: var(--bg-color);
->>>>>>> biografiaHector
 }
 
 @font-face {

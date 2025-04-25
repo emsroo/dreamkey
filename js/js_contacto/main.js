@@ -31,7 +31,7 @@ txtEmail.addEventListener("blur", function(event){
 //Quitamos los espacios al inicio del numero y lo seteamos a 10 digitos
 txtNumber.addEventListener("blur", function(event){
     event.preventDefault();
-    txtNumber.value = txtNumber.value.trim().slice(0,10);
+    txtNumber.value = txtNumber.value.trim();
 });
 
 //Quitamos los espacios al inicio del mensaje
@@ -41,26 +41,23 @@ txtMessage.addEventListener("blur", function(event){
 });
 
 function validarNumero(){
+ 
+    const regex = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$");
 
-    //Condicion para saber si la longitud es menor o igual a 0, regresamos un falso
-    if(txtNumber.value.trim().length<=0){
-        return false; //Tener en cuenta que el "return" una vez se ejecuta, sale directamente de la funcion "validarCantidad"
-    }//length<=0
-
-    //Condicion para validar que sea un numero
-    if(isNaN(txtNumber.value)){
-        return false;
-    }//isNan
-
-    //Condicion para validar si la cantidad es mayor a 0, convirtiendolo a un numero
-    if(Number(txtNumber.value)<=0){
-        return false;
+    if( regex.test(txtNumber.value)){
+        return true;
     }
-
-    //Si tiene algo, regresa verdadero
-    return true;
+    return false;
 
 }//validarNumero
+
+function validarNombre(){
+    const nombreValido = /^[a-zA-Z\s]+$/;
+    if( nombreValido.test(txtName.value)){
+        return true;
+    }
+    return false;
+}
 
 function validarCorreo(){
     let expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;

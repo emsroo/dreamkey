@@ -109,7 +109,7 @@ p {
 }
 
 .card {
-    background-color: var(--color2-color);
+    background-color: var(--color2-color) !important;
 }
 
 div.col div.card{

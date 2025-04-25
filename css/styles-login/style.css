@@ -1,0 +1,108 @@
+
+html{
+   /* Variables */
+ 
+   /* Background color */
+   --bg-color: #DFE2EA;
+ 
+   /* Color para los botones */
+   --button-color: #FFD050;
+ 
+   /* Color para los parrafos*/
+   --p-color: #221132;
+ 
+   /* Otros colores */
+   --color1-color: #E8ABEB;
+   --color2-color: #EACCEB;
+   --color3-color: #D2CBCB;
+   --color4-color: #FFFFFF;
+   --color5-color: #000000;
+ 
+ }
+
+
+.container h1 {
+    text-align: center;
+  }
+
+
+ 
+
+ .bienvenido{
+    font-weight:bold;
+    text-align: center;
+ }
+
+
+ .negrita {
+   text-align: left;
+}
+
+ .mb-3 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 10px;
+ }
+ 
+ .mb-3 label {
+   width: 100px; 
+   margin-right: 10px;
+   color: #000000;
+  
+ }
+
+
+.password{
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+   justify-content: center;
+}
+
+.password label{
+   width: 100px; 
+   margin-right: 10px;
+   color: #000000;
+}
+
+ 
+
+
+input.form-control {
+   background-color:#D2CBCB;
+
+   
+}
+
+
+input.form-control::placeholder {
+   color:#000000;
+ }
+
+ .centrar-boton {
+   display: flex;
+   justify-content: center;
+ }
+
+
+
+ .oval-box {
+   border-radius: 30px;
+   padding: 20px;
+   background-color:#221132;
+   color: white;
+   text-align: center;
+ }
+
+
+.recuerdame {
+   display: flex;
+   align-items: center;
+   justify-content: space-between; /* o space-around / center según lo que quieras */
+   gap: 10px;
+ }
+
+ .form-check-label{
+   font-weight: bold;
+ }

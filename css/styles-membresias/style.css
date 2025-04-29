@@ -28,11 +28,12 @@ body{
     background-color: var(--p-color) !important;
 }
 
-.card{
-    background-color: var(--color4-color) !important;
+/* .card{
+    /* background-color: var(--color4-color) !important;
     margin: 0%;
     padding: 0%;
-}
+    width: 100%;
+} */
 
 .card-body{
     text-align: center;
@@ -60,11 +61,8 @@ body{
     background-color: var(--color2-color) ;
     border-radius: 50%;
     font-size: 20px;
-    width: 180px;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    
+    display:inline-block;
+    padding: 10px 5px;    
 }
 
 .card-text2{
@@ -72,6 +70,9 @@ body{
     border-radius: 40%;
     font-weight: bold;
     font-size: 25px;
+    display:inline-block;
+    padding: 10px 8px; 
+    
 }
 
 

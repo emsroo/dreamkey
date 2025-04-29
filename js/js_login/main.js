@@ -52,6 +52,17 @@ function mostrarError(mensajeError) {
         `
     );
 }
+function validarPassword(){
+
+    //Para validar el password es necesario que la contraseña contenga una minuscula, una mayuscula, un numero y un caracter especial
+    let expReg =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$^&*()_:-]).{8,18}$/;
+    if( expReg.test(password.value)){
+        return true;
+    }
+
+    return false;
+    
+}
 
 
 btnEnviar.addEventListener("click", function(event){

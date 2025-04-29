@@ -42,7 +42,8 @@ txtMessage.addEventListener("blur", function(event){
 
 function validarNumero(){
  
-    const regex = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$");
+    const regex = new RegExp(/^(?!.*(\d)\1{9})(?:\+52\s?)?(?:\(?\d{2,3}\)?[\s-]?)?\d{3}[\s-]?\d{4}$/);
+    
 
     if( regex.test(txtNumber.value)){
         return true;

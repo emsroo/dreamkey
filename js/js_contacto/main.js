@@ -44,7 +44,7 @@ function validarNumero(){
  
     const regex = new RegExp(/^(?!.*(\d)\1{9})(?:\+52\s?)?(?:\(?\d{2,3}\)?[\s-]?)?\d{3}[\s-]?\d{4}$/);
     
-
+    
     if( regex.test(txtNumber.value)){
         return true;
     }

@@ -46,8 +46,8 @@ function addItem(item) {
 }
 
 addItem({
-    name: 'PAQUETE 1',
-    img: './assets/img-memebresia/p1.jpeg',
+    name: 'PAQUETE 1 (Basico)',
+    img: './assets/img-memebresia/Membresia1.png',
     description: 'Incluye acceso al mercado',
     extra1: 'Mercado',
     price1: '$2,500',
@@ -57,8 +57,8 @@ addItem({
 });
 
 addItem({
-    name: 'PAQUETE 2',
-    img: './assets/img-memebresia/p2.jpeg',
+    name: 'PAQUETE 2 (Basico)',
+    img: './assets/img-memebresia/Membresia2.png',
     description: 'Incluye acceso al mercado',
     extra1: 'Mercado',
     price1: '$2,500',
@@ -68,8 +68,8 @@ addItem({
 });
 
 addItem({
-    name: 'PAQUETE 3',
-    img: './assets/img-memebresia/p3.jpeg',
+    name: 'PAQUETE 3 (Estandar)',
+    img: './assets/img-memebresia/Membresia3.png',
     description: 'Incluye acceso al mercado',
     extra1: 'Mercado',
     price1: '$5,000',
@@ -79,8 +79,8 @@ addItem({
 });
 
 addItem({
-    name: 'PAQUETE 4',
-    img: './assets/img-memebresia/p4.jpeg',
+    name: 'PAQUETE 4 (Estandar)',
+    img: './assets/img-memebresia/Membresia4.png',
     description: 'Incluye acceso al mercado',
     extra1: 'Mercado',
     price1: '$5,000',
@@ -90,8 +90,8 @@ addItem({
 });
 
 addItem({
-    name: 'PAQUETE 5',
-    img: './assets/img-memebresia/p5.jpeg',
+    name: 'PAQUETE 5 (Premium)',
+    img: './assets/img-memebresia/Membresia5.png',
     description: 'Incluye acceso al mercado',
     extra1: 'Mercado',
     price1: '$8,500',
@@ -102,8 +102,8 @@ addItem({
 
 
 addItem({
-    name: 'PAQUETE 6',
-    img: './assets/img-memebresia/p6.jpeg',
+    name: 'PAQUETE 6 (Premium)',
+    img: './assets/img-memebresia/Membresia6.png',
     description: 'Incluye acceso al mercado',
     extra1: 'Mercado',
     price1: '$8,500',

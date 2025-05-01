@@ -59,9 +59,14 @@
                                 <div class="mb-3">
                                     <label class="form-label">Imagen de membresía:</label><br>
                                     <button type="button" id="upload_widget" class="btn btn-secondary mb-2">Subir Imagen</button>
-                                    <input type="hidden" id="imageUrl"> <div>
+                                    <input type="file" id="imageUrl"> <div>
                                          <img id="imagePreview" src="#" alt="Vista previa de la imagen" style="display: none;"/>
                                     </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
+                                    <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
                                 </div>
 
                                 <div class="col-4">
@@ -89,6 +94,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="./js/js_formulario_membresias/main.js"></script>
 </body>
 
 </html>

@@ -12,129 +12,105 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-purple">
-        <div class="container-fluid">
-
-            <a class="navbar-brand" href="#">
-                <img src="./assets/dreamkeyLogo.png" alt="Logo" width="70" height="70">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="membresiasDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Membresías</a>
-                        <ul class="dropdown-menu" aria-labelledby="membresiasDropdown">
-                            <li><a class="dropdown-item" href="#">Tipo 1</a></li>
-                            <li><a class="dropdown-item" href="#">Tipo 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Afiliados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contacto.html">Contacto</a>
-                    </li>
-                </ul>
-
-                <form class="d-flex ms-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Empresas y servicios"
-                        aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
-
-  
-    </nav>
+    <div id="header"></div>
 
 
     <section class="form-section">
-        <div class="card-body">
-            <h5 class="card-title">Contáctanos</h5>
-            <p class="card-text"> En DreamKey nos importan mucho nuestros colaboradores
-                    y clientes. Si quieres buscar más
-                    información, puedes enviarnos un mensaje.  </p>
-            <p>
-                <img src="./assets/telefono.jpg" alt="tel" srcset="" width="30" height="22">
-                58-45812354
-            </p>
-            <p>
-                <img src="./assets/correo.jpg" alt="tel" srcset="" width="30" height="20">
-                dream.key.test@gmail.com
-            </p>
-    
-        </div>
-    
-
-        <div class="container-fluid">
-          <div class="row justify-content-center">
-            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-              <div class="card rounded-4">
-                <form>
-                  <div class="mb-3">
-                    <input type="text" class="form-control" id="nom" placeholder="Ingresa tu nombre" required>
+      <div class="container">
+          <div class="row align-items-start">
+  
+              <!-- Contáctanos -->
+              <div class="col-12 col-lg-6 mb-4">
+                  <div class="card-body">
+                      <h5 class="card-title" style="margin: 30px;">Contáctanos</h5>
+                      <p class="card-text">
+                          En DreamKey nos importan mucho nuestros colaboradores y clientes. Si quieres buscar más
+                          información puedes enviarnos un mensaje.
+                      </p>
+                      <p>
+                          <img src="./assets/telefono.jpg" alt="tel" width="30" height="22">
+                          58-45812354
+                      </p>
+                      <p>
+                          <img src="./assets/correo.jpg" alt="correo" width="30" height="20">
+                          dream.key.test@gmail.com
+                      </p>
                   </div>
-                  <div class="mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required>
-                  </div>
-                  <div class="mb-3">
-                    <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu telefono" required>
-                  </div>
-                  <div class="mb-3">
-                    <textarea class="form-control" id="message" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
-                  </div>
-                  <div class="col-4">
-                    <button type="submit" class="btn btn-custom" id="btnEnviar">Enviar</button>
-                  </div>
-                </form>
               </div>
-              <div id="error-msg"> <!-- Aqui se muestra información de los campos invalidos -->
-                                
+  
+              <!-- Formulario -->
+              <div class="col-12 col-lg-6">
+                  <div class="container-fluid">
+                      <div class="row justify-content-center">
+                          <div class="col-12">
+                              <div class="card rounded-4 p-4">
+                                  <form>
+                                      <div class="mb-3">
+                                          <input type="text" class="form-control" id="nom" placeholder="Ingresa tu nombre"
+                                              required>
+                                      </div>
+                                      <div class="mb-3">
+                                          <input type="email" class="form-control" id="email"
+                                              placeholder="Ingresa tu correo" required>
+                                      </div>
+                                      <div class="mb-3">
+                                          <input type="tel" class="form-control" id="telefono"
+                                              placeholder="Ingresa tu telefono" required>
+                                      </div>
+                                      <div class="mb-3">
+                                          <textarea class="form-control" id="message" rows="4"
+                                              placeholder="Ingresa tu mensaje" required></textarea>
+                                      </div>
+                                      <div class="col-4">
+                                          <button type="submit" class="btn btn-custom" id="btnEnviar">Enviar</button>
+                                      </div>
+                                  </form>
+                              </div>
+                              <div id="error-msg"> 
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
+  
           </div>
-        </div>
-      </section>
-      
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row align-items-center" style="padding-top: 12px;padding-bottom: 12px;">
-                <div class="col-sm-4 text-white text-center bg-dark-purple">
-                    <h5 class="">Únete a DreamKey hoy y <br> consiéntete como mereces.</h5>
-                </div>
+      </div>
+  </section>
 
-                <div class="col-sm-2 text-center bg-dark-purple rounded-end">
-                    <button class="btn btn-yellow align-items-center">Suscríbete aquí</button>
-                </div>
-
-                <div class="col-sm-6 text-center bg-light-purple">
-                    <h6>DREAMKEY</h6>
-                    <nav>
-                        <a href="./nosotros.html" class="footer-link">Nosotros</a>
-                        <a href="#" class="footer-link">Afiliados</a>
-                        <a href="#" class="footer-link">Membresías</a>
-                        <a href="#" class="footer-link">Inicio</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
+    
+    <div id="footer"></div>
+    
+    <script>
+        //Cargar el conetenido de header
+    fetch("navTemplete.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+         });
+    </script>
+    <script>
+        //Cargar el conetenido de footer
+    fetch("footerTemplate.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+         });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script src="./js/js_contacto/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "Y_DWBuz5qjaerjzbZ",
+           });
+        })();
+    </script>
 </body>
 
 </html>

@@ -13,10 +13,8 @@ const cuadroDeAlerta = document.getElementById("error-msg");
 //Variable para almacenar los elementos de la tabla
 let datos = new Array(); //[]
 
-// Nuevas variables para la imagen
-const uploadButton = document.getElementById("upload_widget"); // Botón que dispara la carga
-const imageUrlInput = document.getElementById("imageUrl"); // Input oculto para guardar la URL
-const imagePreview = document.getElementById("imagePreview"); // Etiqueta img para la vista previa
+// Nuevas variable para la imagen
+const imageUrlInput = document.getElementById("upload_widget");
 
 //Variable de acceso al elemento imagen
 const btnEnviar = document.getElementById("btnEnviar");
@@ -29,16 +27,18 @@ function validarNombre() {
     return false;
 }//Validar nombres
 
+//Cambié la expresión regular para que pueda permitir mejores inputs
 function validarPrecioPublico() {
-    const regex = new RegExp(/^([1-9]\d(.\d+)?|0.\d[1-9]\d*)$/);
+    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:(?:[1-9]\d{0,2}(?:,\d{3})+)|(?:[1-9]\d*))(?:\.\d{1,2})?$/);
     if (regex.test(precioPublico.value)) {
         return true;
     }
     return false;
 }//ValidarPrecio
 
+//Cambié la expresión regular para que pueda permitir mejores inputs
 function validarPrecioAfiliados() {
-    const regex = new RegExp(/^([1-9]\d(.\d+)?|0.\d[1-9]\d*)$/);
+    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:(?:[1-9]\d{0,2}(?:,\d{3})+)|(?:[1-9]\d*))(?:\.\d{1,2})?$/);
     if (regex.test(precioAfiliados.value)) {
         return true;
     }
@@ -52,12 +52,18 @@ function validarDescripcion() {
     return false;
 }//Validar Descripcion
 
+//Creamos la funcion de Validar Imagen
+//Esta funcion solo verifica si tiene o no contenido el apartado, se puede mejorar quizas verificando el tamaño, tipo de imagen "jpeg", "web","jpg", etc
+//Igualmente se puede mejorar quizás con el tamaño permitido
 function validarImagen() {
-    if (imageUrlInput.files === "") {
+    const archivos = imageUrlInput.files;
+
+    if (archivos && archivos.length > 0) {
         return true;
+    } else {
+        return false;
     }
-    return false;
-}//Validar Imagen
+}//validarImagen
 
 function mostrarError(mensajeError) {
     cuadroDeAlerta.insertAdjacentHTML("beforeend",
@@ -68,6 +74,9 @@ function mostrarError(mensajeError) {
         `
     );
 }
+
+//Aquí creamos un evento qu se activa cuando el usuario selecciona uno o más archivos desde su sistema
+//imageUrlInput.addEventListener("change", validarImagen);
 
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
@@ -85,35 +94,31 @@ btnEnviar.addEventListener("click", function (event) {
     // txtEmail.value = txtEmail.value.trim();
     // txtMessage.value = txtMessage.value.trim();
 
-    //Validmos que la longitud del valor del nombre sea mayor a 1
+    //Validmos que la longitud del valor del nombre sea mayor a 1 del nombre de la membresía
     if (txtName.value.length < 1) {
         isValid = false;
         mensajeError += "<p>El nombre es muy corto</p>";
     }//length<3
 
-    //Validmos que la longitud del valor del email sea mayor a 1
     if (!validarPrecioPublico()) {
         isValid = false;
         mensajeError += "<p>El precio a publico es inválido</p>";
-    }//length<3
+    }//validarPrecioPublico
 
-    //Validmos que la longitud del valor del email sea mayor a 1
     if (!validarPrecioAfiliados()) {
         isValid = false;
         mensajeError += "<p>El precio a afiliados es inválido</p>";
-    }//length<3
+    }//validarPrecioAfiliados
 
     if (descripcion.value.length < 1) {
         isValid = false;
         mensajeError += "<p>Agregar descripción</p>";
     }//validarNumero
 
-    //Validmos que la longitud del valor del email sea mayor a 1
-    if (!validarImagen) {
+    if (!validarImagen()) {
         isValid = false;
         mensajeError += "<p>Se necesita agregar una imagen</p>";
-        //txtMessage.style.borderColor = "red";
-    }//length<3
+    }//validarImagen
 
     //Marcar errores en color rojo 
     if (!validarNombre()) {
@@ -139,28 +144,64 @@ btnEnviar.addEventListener("click", function (event) {
         descripcion.style.borderColor = "red";
     }
 
+    //Aqui estaba mal el orden, ya quedo bien segun la validacion si tiene o no imagen
     if (!validarImagen()) {
-        imageUrlInput.style.borderColor = "";
-    } else {
         imageUrlInput.style.borderColor = "red";
-        imageUrlInput.style.type = "display";
+    } else {
+        imageUrlInput.style.borderColor = "";
     }
 
     if (isValid) {
 
-        let elemento = {
-            "Nombre": txtName.value,
-            "PrecioPublico": precioPublico.value,
-            "PrecioAfiliados": precioAfiliados.value,
-            "Descripcion": descripcion.value,
-            "Imagen": imageUrlInput.files,
-        }
+        //Aqui declaro las variables nuevamente con los valores agregados al formulario para poder usarlos dentro del then del fetch
+        let img = imageUrlInput.files[0];
+        let img_name = imageUrlInput.files[0].name;
 
-        //Guardamos el objeto "elemento" en el arreglo "datos"
-        datos.push(elemento);
+        let nombre = txtName.value;
+        let precioPublicoVal = precioPublico.value;
+        let precioAfiliadosVal = precioAfiliados.value;
+        let descripcionVal = descripcion.value;
 
-        //Imprimimos los datos en la pantalla
-        console.log(datos);
+        // Se Configuran los parámetros de Cloudinary
+        // Aqui estoy usando la url API y "upload_preset" pero podemos crear una cuenta general para la pagina
+        const formData = new FormData();
+        formData.append('file', img);
+        formData.append('upload_preset', 'uw_test');  
+
+        // Hacer la solicitud POST a Cloudinary
+        fetch('https://api.cloudinary.com/v1_1/dj2n2palt/image/upload', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.secure_url) {
+                    //console.log('Imagen subida correctamente:', data.secure_url); Confirmamos que se sube la imagen a cloudinary
+
+                    //Creamos el JSON con la informacion del formulario
+                    let elemento = {
+                        "Nombre": nombre,
+                        "PrecioPublico": precioPublicoVal,
+                        "PrecioAfiliados": precioAfiliadosVal,
+                        "Descripcion": descripcionVal,
+                        "Imagen": img_name,
+                        "Imagen_cloud": data.secure_url,
+                    };
+
+                    //Aqui le hago push al arreglo, pero aqui en vez de un arreglo podemos usar la funcion "addItem" como hicimos para crear las cards
+                    //Talque seria "addItem(elemento)"";
+                    //datos.push(elemento);
+
+
+                    //console.log(datos); Imprimimos los datos en la consola, debug
+
+                } else {
+                    console.log('Error en la carga de la imagen');
+                }
+            })
+            .catch(error => {
+                console.error('Error al subir la imagen:', error);
+            });
 
         //Con las siguientes dos lineas limpiamos los valores de los datos
         txtName.value = "";

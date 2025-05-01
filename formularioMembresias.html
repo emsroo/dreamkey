@@ -40,35 +40,30 @@
                         <div class="card rounded-4 p-4">
                             <form>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="nom" placeholder="Nombre de membresía"
+                                    <label for="nom" class="form-label">Nombre de la membresía</label>
+                                    <input type="text" class="form-control" id="nom" placeholder="Ejemplo: Paquete 6"
                                         required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="number" class="form-control" id="precio-publico" placeholder="Ingresa el precio inicial"
+                                    <label for="precio-publico" class="form-label">Ingresa el precio inicial</label>
+                                    <input type="text" class="form-control" id="precio-publico" placeholder="Ejemplo: 5,600.99"
                                         required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="number" class="form-control" id="precio-afiliados" placeholder="Ingresa el precio especial"
+                                    <label for="precio-afiliados" class="form-label">Ingresa el precio especial</label>
+                                    <input type="text" class="form-control" id="precio-afiliados" placeholder="Ejemplo: 5,600.99"
                                         required>
                                 </div>
                                
                                 <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Descripción de la membresía</label>
                                     <textarea class="form-control" id="descripcion" rows="4"
-                                        placeholder="Descripción de la membresía" required></textarea>
+                                        placeholder="Ejemplo: Esta membresía abarca salones de belleza, barberias, spa.." required></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Imagen de membresía:</label><br>
-                                    <button type="button" id="upload_widget" class="btn btn-secondary mb-2">Subir Imagen</button>
-                                    <input type="file" id="imageUrl"> <div>
-                                         <img id="imagePreview" src="#" alt="Vista previa de la imagen" style="display: none;"/>
-                                    </div>
+                                    <label for="upload_widget" class="form-label">Ingresa imagen de la membresía</label>
+                                    <input id="upload_widget" class=" form-control" type="file">
                                 </div>
-
-                                <div class="input-group mb-3">
-                                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
-                                    <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
-                                </div>
-
                                 <div class="col-4">
                                     <button type="submit" class="btn btn-custom" id="btnEnviar">Subir</button>
                                 </div>

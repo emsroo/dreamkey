@@ -1,3 +1,6 @@
+//Importamos el js para guardar los datos de la memebresia en el localstorage
+import { guardarMembresia } from "../js_localStorage_membre/guardarMembresias.js";
+
 //Variable de acceso al elemento del nombre
 const txtName = document.getElementById("nom");
 //Variable de acceso al elemento  precioPublico
@@ -180,13 +183,16 @@ btnEnviar.addEventListener("click", function (event) {
 
                     //Creamos el JSON con la informacion del formulario
                     let elemento = {
-                        "Nombre": nombre,
-                        "PrecioPublico": precioPublicoVal,
-                        "PrecioAfiliados": precioAfiliadosVal,
-                        "Descripcion": descripcionVal,
+                        "name": nombre,
+                        "price1": precioPublicoVal,
+                        "price2": precioAfiliadosVal,
+                        "description": descripcionVal,
                         "Imagen": img_name,
-                        "Imagen_cloud": data.secure_url,
+                        "img": data.secure_url,
                     };
+
+                    //Guardamos en el localStorage
+                    guardarMembresia(nombre, elemento);
 
                     //Aqui le hago push al arreglo, pero aqui en vez de un arreglo podemos usar la funcion "addItem" como hicimos para crear las cards
                     //Talque seria "addItem(elemento)"";

@@ -1,4 +1,4 @@
-function addItem(item) {
+export function addItem(item) {
     const itemHTML = `
         <div class="col-sm-6 col-md-6 col-lg-4">
             <div class="card w-auto mb-4">

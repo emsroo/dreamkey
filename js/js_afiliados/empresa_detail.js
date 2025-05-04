@@ -2,9 +2,9 @@ import { items } from './afiliados-data.js'
 // Leer el ID de la URL
 const params = new URLSearchParams(window.location.search);
 const nombreEmpresa = params.get('name');
-// Buscar el item por ID
+// Buscar el item por nombre
 const afiliados = items.find(item => item.name === nombreEmpresa);
-// Si se encuentra, mostrarlo
+// Si se encuentra, mostrar el item, de lo contrario mostrar un mensaje de error
 if (afiliados) {
     addItem(afiliados);
     document.title = afiliados.name + ' | Detalle de Empresa';

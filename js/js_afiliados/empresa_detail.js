@@ -55,8 +55,6 @@ function addItem(item) {
                 '</div>\n' +
             '</div>\n' +
 
-            '<div class="row">Rating & Reviews</div>\n' +
-            '<div class="row"><div class="col-sm" style="text-align: left;">All Reviews</div></div>\n' +
         '</div><br/>';
 
     const itemsContainer = document.getElementById("list-items");

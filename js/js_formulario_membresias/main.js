@@ -32,7 +32,12 @@ function validarNombre() {
 
 //Cambié la expresión regular para que pueda permitir mejores inputs
 function validarPrecioPublico() {
-    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:(?:[1-9]\d{0,2}(?:,\d{3})+)|(?:[1-9]\d*))(?:\.\d{1,2})?$/);
+    // Regex: ^ (inicio)
+    // [1-9]\d* (un dígito del 1 al 9, seguido de cero o más dígitos del 0 al 9 - la parte entera)
+    // (?:\.\d{1,2})? (opcionalmente: un punto decimal, seguido de 1 o 2 dígitos)
+    // $ (fin de string)
+    const regex = new RegExp(/^[1-9]\d*(?:\.\d{1,2})?$/);
+
     if (regex.test(precioPublico.value)) {
         return true;
     }
@@ -41,7 +46,7 @@ function validarPrecioPublico() {
 
 //Cambié la expresión regular para que pueda permitir mejores inputs
 function validarPrecioAfiliados() {
-    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:(?:[1-9]\d{0,2}(?:,\d{3})+)|(?:[1-9]\d*))(?:\.\d{1,2})?$/);
+    const regex = new RegExp(/^[1-9]\d*(?:\.\d{1,2})?$/);
     if (regex.test(precioAfiliados.value)) {
         return true;
     }
@@ -105,7 +110,7 @@ btnEnviar.addEventListener("click", function (event) {
 
     if (!validarPrecioPublico()) {
         isValid = false;
-        mensajeError += "<p>El precio a publico es inválido</p>";
+        mensajeError += "<p>El precio a público es inválido</p>";
     }//validarPrecioPublico
 
     if (!validarPrecioAfiliados()) {
@@ -157,21 +162,23 @@ btnEnviar.addEventListener("click", function (event) {
     if (isValid) {
 
         //Aqui declaro las variables nuevamente con los valores agregados al formulario para poder usarlos dentro del then del fetch
-        let img = imageUrlInput.files[0];
-        let img_name = imageUrlInput.files[0].name;
+        let img = imageUrlInput.files[0];   //captura el archicvo de imagen seleccionado por el usuario 
+        let img_name = imageUrlInput.files[0].name; // obtiene el nombre del archivo de la imagen
 
-        let nombre = txtName.value;
+        let nombre = txtName.value; //captura valores de los otros campos del formulario
         let precioPublicoVal = precioPublico.value;
         let precioAfiliadosVal = precioAfiliados.value;
         let descripcionVal = descripcion.value;
 
-        // Se Configuran los parámetros de Cloudinary
+        // Se Configuran los parámetros de Cloudinary   ----------------------------------------------------
         // Aqui estoy usando la url API y "upload_preset" pero podemos crear una cuenta general para la pagina
-        const formData = new FormData();
-        formData.append('file', img);
-        formData.append('upload_preset', 'uw_test');  
+        const formData = new FormData();  // Es un objeto que permit enviar datos de formulario, como si fueran un 
+        //HTML codigicado con multipart/formdata?
+        formData.append('file', img); // anade el archivo de imagen al FormData, bajo la clave ''file
+        formData.append('upload_preset', 'uw_test');   // Preset configura las opciones de carga, uw_test es el nombre
+        // es el nombre del preset en la cuenta de Cloudinary 'dj2n2palt'.
 
-        // Hacer la solicitud POST a Cloudinary
+        // Hacer la solicitud POST al endpoint de carga de imagenes de Cloudinary
         fetch('https://api.cloudinary.com/v1_1/dj2n2palt/image/upload', {
             method: 'POST',
             body: formData

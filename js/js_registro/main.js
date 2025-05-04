@@ -92,11 +92,11 @@ btnEnviar.addEventListener("click", function(event){
     
     if(! validarCorreo()){
         isValid = false;
-        mensajeError += "<p>El correo es invalido</p>";
+        mensajeError += "<p>El correo es inválido</p>";
     }//length<3
     if(! validarPassword()){
         isValid = false;
-        mensajeError += "<p>La contraseña debe contener una minuscula, una mayuscula, un numero, un caracter especial y una longitud de entre 8 y 18 caracteres.</p>";
+        mensajeError += "<p>La contraseña debe contener una minúscula, una mayúscula, un número, un carácter especial y una longitud de entre 8 y 18 caracteres.</p>";
     }
 
     //Marcar errores en color rojo 

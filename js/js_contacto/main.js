@@ -113,12 +113,12 @@ btnEnviar.addEventListener("click", function(event){
     //Validmos que la longitud del valor del email sea mayor a 1
     if(! validarCorreo()){
         isValid = false;
-        mensajeError += "<p>El correo es invalido</p>";
+        mensajeError += "<p>El correo es inválido</p>";
     }//length<3
     
     if(! validarNumero()){
         isValid = false;
-        mensajeError += "<p>El numero telefónico es invalido</p>";
+        mensajeError += "<p>El numero telefónico es inválido</p>";
     }//validarNumero
     
     //Validmos que la longitud del valor del email sea mayor a 1

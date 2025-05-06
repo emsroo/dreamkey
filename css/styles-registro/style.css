@@ -21,6 +21,14 @@ html{
 
 }
 
+.intro-text {
+  font-size: 20px; /* o el tamaño que quieras */
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
 
 body {
   font-family: 'MagallanesRegular', sans-serif;
@@ -98,8 +106,10 @@ font-weight: bold;
 }
 
 p {
-font-size: small;
+font-size: 20px;
 color: var(--p-color);
+margin: 0;
+
 }
 
 .card-text-center{
@@ -261,9 +271,6 @@ h5, h6 {
  margin-top: 10px;
 }
 
-p {
-  margin: 0;
-}
 
 .rounded-start {
   border-top-left-radius: 20px;

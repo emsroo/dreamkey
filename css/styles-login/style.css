@@ -106,3 +106,14 @@ input.form-control::placeholder {
  .form-check-label{
    font-weight: bold;
  }
+
+ #btn-registro {
+   background-color: var(--button-color);
+   border: none;
+   color: #000000;
+   font-weight: bold;
+   border-radius: 5px;
+   text-decoration: none;  
+   padding: 12px 20px;      
+ }
+ 

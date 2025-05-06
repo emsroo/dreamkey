@@ -187,3 +187,11 @@ p {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
+  #titulo{
+    text-align: center;
+    font-size: 30px;
+    color: var(--color5-color);
+    font-family: 'MagallanesBold', sans-serif;
+    margin-top: 20px;
+  }

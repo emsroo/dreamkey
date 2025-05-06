@@ -41,9 +41,18 @@ body {
 }
 
 
+.navbar{
+  background-color: #221132;
+}
+
 .navbar .navbar-brand {
   color: #FFFFFF; /* Naranja */
   font-size: 20px; /* Tamaño de letra opcional */
+}
+
+.navbar-toggler{
+  border-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 

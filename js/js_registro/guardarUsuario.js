@@ -25,7 +25,7 @@ export function guardarUsuario(clave, usuarios) {
 //     Nombre : "Fredy Alonzo",
 //     Email : "fredyalonzo1307@gmail.com",
 //     Numero : "9992683894",
-//     Password : "Fornite2481"
+//     Password : "Fornite.2481"
 // }
 
 // let elemento1 = {

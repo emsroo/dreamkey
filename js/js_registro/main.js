@@ -1,3 +1,6 @@
+//Importamos el js para guardar los datos de la memebresia en el localstorage
+import { guardarUsuario } from "./guardarUsuario.js";
+
 //Variable de acceso al elemento del nombre
 const txtName = document.getElementById("nom");
 //Variable de acceso al elemento del telefono
@@ -14,8 +17,8 @@ const btnEnviar = document.getElementById("btnEnviar");
 // Cuadro que muestra los errores en los campos de datos
 const cuadroDeAlerta = document.getElementById("error-msg");
 
-//Variable para almacenar los elementos de la tabla
-let datos = new Array(); //[]
+//Arreglo para almacenar los datos de los usuarios en el LocalStorage
+let usuarios = new Array(); //[]
 
 //Quitamos los espacios al inicio del nombre y lo hacemos todo mayusculas
 txtName.addEventListener("blur", function (event) {
@@ -167,17 +170,19 @@ btnEnviar.addEventListener("click", function (event) {
 
     if (isValid) {
 
-        let elemento = {
+        let usuario = {
             "Nombre": txtName.value,
-            "Telefono ": txtNumber.value,
+            "Teléfono": txtNumber.value,
             "Email": txtEmail.value,
             "Password": password.value
         }
-        //Guardamos el objeto "elemento" en el arreglo "datos"
-        datos.push(elemento);
+
+        //Guardamos el objeto "usuario" en el arreglo "usuarios"
+        usuarios.push(usuario);
+        guardarUsuario('Usuarios',usuarios);
 
         //Imprimimos los datos en la pantalla
-        console.log(datos);
+        //console.log(datos);
 
         //Con las siguientes dos lineas limpiamos los valores de los datos
         txtName.value = "";

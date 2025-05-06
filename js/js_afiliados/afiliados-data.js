@@ -1,7 +1,8 @@
 export const items= [{
     'name': 'Atelier Ross Melgar',
+    'id':'1',
     'img': '../../assets/img-afiliados/Atelier.jpg',
-    'descripción': 'spa & salón de belleza',
+    'descripción': 'Spa & salón de belleza',
     'rating': '5.0',
     'detalles': 'Es un spa y salón de belleza que ofrece una experiencia única de relajación y cuidado personal. Con un equipo altamente capacitado brindando y cuidando siempre la calidad de sus servicios. Ofrecen una amplia gama de tratamientos faciales y corporales, así como servicios de peluquería y estética. Su ambiente acogedor y profesional garantiza una experiencia inolvidable para cada cliente.',
     "servicios": {
@@ -19,8 +20,9 @@ export const items= [{
 
 {
     'name': 'Belleza Eterna',
+    'id':'2',
     'img': '../../assets/img-afiliados/Eterna.jpg',
-    'descripción': 'spa',
+    'descripción': 'Spa',
     'rating': '4.5',
     'detalles': 'Es un spa que se especializa en tratamientos de belleza y bienestar. Ofrecen servicios con una calidad excepcional y un enfoque personalizado para cada cliente. Además de contar con productos de alta gamma y personal altamente capacitado para consentirte.',
     "servicios": {
@@ -38,8 +40,9 @@ export const items= [{
 
 {
     'name': 'Luz y Brillo',
+    'id':'3',
     'img': '../../assets/img-afiliados/Luz.jpg',
-    'descripción': 'barbería',
+    'descripción': 'Barbería',
     'rating': '5.0',
     'detalles': 'Barbería especializada en cortes de cabello y afeitados. Ofrecen una experiencia única de relajación y servicio personalizado. Cuentan con certificaciones y un equipo que buscara siempre la calidad en sus servicios, con un estilo fresco y moderno.',
     "servicios": {
@@ -57,6 +60,7 @@ export const items= [{
 
 {
     'name': 'Diva Glam',
+    'id':'4',
     'img': '../../assets/img-afiliados/Diva.jpg',
     'descripción': 'Estudio de uñas',
     'rating': '4.5',
@@ -76,6 +80,7 @@ export const items= [{
 
 {
     'name': 'Elegance Studio',
+    'id':'5',
     'img': '../../assets/img-afiliados/Elegance.jpg',
     'descripción': 'Centro de Belleza',
     'rating': '4.5',
@@ -95,6 +100,7 @@ export const items= [{
 
 {
     'name': 'Iconic',
+    'id':'6',
     'img': '../../assets/img-afiliados/Iconic.jpg',
     'descripción': 'Barbería',
     'rating': '4.5',
@@ -114,6 +120,7 @@ export const items= [{
 
 {
     'name': 'Luxury nails',
+    'id':'7',
     'img': ' ../../assets/img-afiliados/luxury.jpg',
     'descripción': 'Studio de uñas',
     'rating': '4.8',
@@ -133,6 +140,7 @@ export const items= [{
 
 {
     'name': 'Nails glam studio',
+    'id':'8',
     'img': '../../assets/img-afiliados/Nails.jpg',
     'descripción': 'Studio de uñas',
     'rating': '4.7',
@@ -152,6 +160,7 @@ export const items= [{
 
 {
     'name': 'Barbería Imperial',
+    'id':'9',
     'img': '../../assets/img-afiliados/Barberia.jpg',
     'descripción': 'Barbería',
     'rating': '4.8',

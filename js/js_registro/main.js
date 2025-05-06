@@ -6,7 +6,8 @@ const txtNumber = document.getElementById("telefono");
 const txtEmail = document.getElementById("email-address");
 //Variable de acceso al elemento al password
 const password = document.getElementById("password");
-
+//Variable de acceso al elemento confirmar password
+const confirPassword = document.getElementById("confirmPassword");
 //Variable de acceso al elemento del boton enviar
 const btnEnviar = document.getElementById("btnEnviar");
 
@@ -84,6 +85,10 @@ function validarPassword() {
 
 }//validarPassword
 
+function validarConfirmPassword() {
+    return password.value === confirPassword.value;
+}//validarConfirmPassword
+
 function mostrarError(mensajeError) {
     cuadroDeAlerta.insertAdjacentHTML("beforeend",
         `
@@ -128,6 +133,10 @@ btnEnviar.addEventListener("click", function (event) {
         isValid = false;
         mensajeError += "<p>La contraseña debe contener una minuscula, una mayuscula, un numero, un caracter especial y una longitud de entre 8 y 18 caracteres.</p>";
     }
+    if (!validarConfirmPassword()) {
+        isValid = false;
+        mensajeError += "<p>Las contraseñas no coinciden</p>";
+    }
 
     //Marcar errores en color rojo 
     if (!validarNombre()) {
@@ -150,6 +159,11 @@ btnEnviar.addEventListener("click", function (event) {
     } else {
         password.style.borderColor = "";
     }
+    if (!validarConfirmPassword()) {
+        confirPassword.style.borderColor = "red";
+    } else {
+        confirPassword.style.borderColor = "";
+    }
 
     if (isValid) {
 
@@ -170,6 +184,7 @@ btnEnviar.addEventListener("click", function (event) {
         txtNumber.value = "";
         txtEmail.value = "";
         password.value = "";
+        confirPassword.value = "";
         txtName.focus();
 
         Swal.fire({

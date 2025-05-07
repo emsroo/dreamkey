@@ -32,3 +32,9 @@ body {
     font-family: 'MagallanesRegular', sans-serif;
     background-color: var(--bg-color);
 }
+
+div.empresaDetail{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}

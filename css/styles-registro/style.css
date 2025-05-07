@@ -21,6 +21,14 @@ html{
 
 }
 
+.intro-text {
+  font-size: 20px; /* o el tamaño que quieras */
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
 
 body {
   font-family: 'MagallanesRegular', sans-serif;
@@ -43,18 +51,9 @@ body {
 /* termina  fuentes */
 
 
-.navbar{
-  background-color: #221132;
-}
-
 .navbar .navbar-brand {
   color: #FFFFFF; /* Naranja */
   font-size: 20px; /* Tamaño de letra opcional */
-}
-
-.navbar-toggler{
-  border-color: var(--bg-color);
-  background-color: var(--bg-color);
 }
 
 
@@ -107,8 +106,10 @@ font-weight: bold;
 }
 
 p {
-font-size: small;
+font-size: 20px;
 color: var(--p-color);
+margin: 0;
+
 }
 
 .card-text-center{
@@ -226,7 +227,6 @@ div.row div.col{
 .form-section {
   padding-top: 5rem;
 }
-
 .card {
   background-color: #e5eaf4;
   border: none;
@@ -267,9 +267,6 @@ h5, h6 {
  margin-top: 10px;
 }
 
-p {
-  margin: 0;
-}
 
 .rounded-start {
   border-top-left-radius: 20px;
@@ -281,9 +278,8 @@ p {
   border-bottom-right-radius: 20px;
 }
 
-div.contacto{
+div.register{
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-  

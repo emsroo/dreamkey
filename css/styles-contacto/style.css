@@ -116,12 +116,12 @@ margin: 30px 110px 30px 110px;
 text-align: center;
 }
 
-p.card-text{
+p.card-text-contacto{
 text-align: justify;
 font-size: 20px; 
 }
 
-.card-title {
+.card-title-contacto {
 /* background-color: var(--color3-color  ); */
 margin-top: 30px;
   margin-bottom: 30px;

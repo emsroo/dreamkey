@@ -21,6 +21,17 @@ html{
 
 }
 
+
+/* centrar */
+
+div.register {
+  /* place-items: center; Centra los hijos directos en ambos ejes */
+
+  /* min-height: 100vh; */
+  /* display: grid; */
+  /* grid-template-rows: auto 1fr auto; Define 3 filas, la del medio es flexible */
+}
+/* centrar */
 .intro-text {
   font-size: 20px; /* o el tamaño que quieras */
 }

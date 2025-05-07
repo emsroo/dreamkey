@@ -70,7 +70,7 @@ addItem({
     name: 'PAQUETE 3',
     tipoMembresia: 'Estándar',
     img: './assets/img-memebresia/Membresia3.png',
-    description: 'Incluye 5 servicios platino (Estandar) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
+    description: 'Incluye 5 servicios platino (Estándar) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
     price1: '$1,200',
     price2: '$800',
 });
@@ -80,7 +80,7 @@ addItem({
     name: 'PAQUETE 4',
     tipoMembresia: 'Estándar',
     img: './assets/img-memebresia/Membresia4.png',
-    description: 'Incluye 10 servicios platino (Estandar) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
+    description: 'Incluye 10 servicios platino (Estándar) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
     price1: '$1,800',
     price2: '$1,200',
 });

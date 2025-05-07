@@ -223,13 +223,10 @@ div.row div.col{
   cursor: pointer;
 }
 
-
 .form-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 5rem;
 }
+
 .card {
   background-color: #e5eaf4;
   border: none;
@@ -284,4 +281,9 @@ p {
   border-bottom-right-radius: 20px;
 }
 
+div.contacto{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
   

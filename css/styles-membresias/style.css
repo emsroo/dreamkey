@@ -80,3 +80,7 @@ div.membresias{
     display: grid;
     grid-template-rows: auto 1fr auto;
   }
+
+  #btnCerrar{
+    background-color: #221132;
+}

@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 p {
-    font-size: small;
+    font-size: medium;
     color: var(--p-color);
 }
 
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 p {
-    font-size: small;
+    font-size: medium;
     color: var(--p-color);
 }
 
@@ -229,7 +229,7 @@ div.row div.col div.card div.card-body h5.card-title{
   }
   
   p {
-    margin: 0;
+    margin-top: 10px;
   }
   
   .rounded-start {
@@ -287,3 +287,29 @@ div.row div.col div.card div.card-body h5.card-title{
         transform: scale(1.2);
     }
 }
+
+.iconos {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .iconos:hover {
+    transform: scale(1.1);
+  }
+
+  .botonModal{
+    background-color: var(--button-color);
+    border : none;
+    align-content: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+
+  .card-title{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  

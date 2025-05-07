@@ -187,3 +187,9 @@ p {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
+  div.afiliados{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }

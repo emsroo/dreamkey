@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 p {
-    font-size: medium;
+    font-size: small;
     color: var(--p-color);
 }
 
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 p {
-    font-size: medium;
+    font-size: small;
     color: var(--p-color);
 }
 
@@ -229,7 +229,7 @@ div.row div.col div.card div.card-body h5.card-title{
   }
   
   p {
-    margin-top: 10px;
+    margin-top: 5px;
   }
   
   .rounded-start {

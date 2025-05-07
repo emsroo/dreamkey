@@ -3,16 +3,16 @@ export function addItem(item) {
         <div class="col-sm-6 col-md-6 col-lg-4">
             <div class="card w-auto mb-4">
                 <div class="card-header">
-                    <h4 class="titulo">${item.name}<span>
+                    <h4 class="titulo">${item.name}</br> (${item.tipoMembresia})<span>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">${item.button}</button>
+                            data-bs-target="#staticBackdrop">Detalles</button>
                     </span></h4>
                 </div>
                 <div class="card-body">
                     <img src="${item.img}" class="card-img-top" alt="${item.name}">
-                    <h5 class="card-title">${item.extra1}</h5>
+                    <h5 class="card-title">Precio público</h5>
                     <p class="card-text1 text-center">${item.price1}</p>
-                    <h4 class="card-title">${item.extra2}</h4>
+                    <h4 class="card-title">Precio con descuento</h4>
                     <p class="card-text2">${item.price2}</p>
                 </div>
             </div>
@@ -46,68 +46,56 @@ export function addItem(item) {
 }
 
 addItem({
-    name: 'PAQUETE 1 (Basico)',
+    name: 'PAQUETE 1',
+    tipoMembresia: 'Básico',
     img: './assets/img-memebresia/Membresia1.png',
-    description: 'Incluye acceso al mercado',
-    extra1: 'Mercado',
-    price1: '$2,500',
-    extra2: 'TITULARES',
-    price2: '$1,500',
-    button: 'modal'
+    description: 'Incluye 5 servicios rosas (básicos) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la pagina de afiliados que empresas están disponibles con este nivel.',
+    price1: '$700',
+    price2: '$500',
 });
 
 addItem({
-    name: 'PAQUETE 2 (Basico)',
+    name: 'PAQUETE 2',
+    tipoMembresia: 'Básico',
     img: './assets/img-memebresia/Membresia2.png',
-    description: 'Incluye acceso al mercado',
-    extra1: 'Mercado',
-    price1: '$2,500',
-    extra2: 'TITULARES',
-    price2: '$1,500',
-    button: 'modal'
+    description: 'Incluye 10 servicios rosas (básicos) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la pagina de afiliados que empresas están disponibles con este nivel.',
+    price1: '$1,200',
+    price2: '$800',
 });
 
 addItem({
-    name: 'PAQUETE 3 (Estandar)',
+    name: 'PAQUETE 3',
+    tipoMembresia: 'Estandar',
     img: './assets/img-memebresia/Membresia3.png',
-    description: 'Incluye acceso al mercado',
-    extra1: 'Mercado',
-    price1: '$5,000',
-    extra2: 'TITULARES',
-    price2: '$3,500',
-    button: 'modal'
+    description: 'Incluye 5 servicios platino (Estandar) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la pagina de afiliados que empresas están disponibles con este nivel.',
+    price1: '$1,200',
+    price2: '$800',
 });
 
 addItem({
-    name: 'PAQUETE 4 (Estandar)',
+    name: 'PAQUETE 4',
+    tipoMembresia: 'Estandar',
     img: './assets/img-memebresia/Membresia4.png',
-    description: 'Incluye acceso al mercado',
-    extra1: 'Mercado',
-    price1: '$5,000',
-    extra2: 'TITULARES',
-    price2: '$3,500',
-    button: 'modal'
+    description: 'Incluye 10 servicios platino (Estandar) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la pagina de afiliados que empresas están disponibles con este nivel.',
+    price1: '$1,800',
+    price2: '$1,200',
 });
 
 addItem({
-    name: 'PAQUETE 5 (Premium)',
+    name: 'PAQUETE 5',
+    tipoMembresia: 'Premium',
     img: './assets/img-memebresia/Membresia5.png',
-    description: 'Incluye acceso al mercado',
-    extra1: 'Mercado',
-    price1: '$8,500',
-    extra2: 'TITULARES',
-    price2: '$6,500',
-    button: 'modal'
+    description: 'Incluye 5 servicios oro (Premium) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la pagina de afiliados que empresas están disponibles con este nivel.',
+    price1: '$1,800',
+    price2: '$1,200',
 });
 
 
 addItem({
-    name: 'PAQUETE 6 (Premium)',
+    name: 'PAQUETE 6',
+    tipoMembresia: 'Premium',
     img: './assets/img-memebresia/Membresia6.png',
-    description: 'Incluye acceso al mercado',
-    extra1: 'Mercado',
-    price1: '$8,500',
-    extra2: 'TITULARES',
-    price2: '$6,500',
-    button: 'modal'
+    description: 'Incluye 10 servicios oro (Premium) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la pagina de afiliados que empresas están disponibles con este nivel.',
+    price1: '$3,500',
+    price2: '$2,000',
 });

@@ -103,3 +103,9 @@ h2.secciones{
 h2.reviews{
     text-align: left;
 }
+
+div.index_dreamkey{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}

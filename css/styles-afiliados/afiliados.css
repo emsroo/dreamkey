@@ -195,3 +195,9 @@ p {
     font-family: 'MagallanesBold', sans-serif;
     margin-top: 20px;
   }
+  
+  div.afiliados{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }

@@ -105,7 +105,7 @@ btnEnviar.addEventListener("click", function (event) {
 
     if (!validarPrecioPublico()) {
         isValid = false;
-        mensajeError += "<p>El precio a publico es inválido</p>";
+        mensajeError += "<p>El precio a público es inválido</p>";
     }//validarPrecioPublico
 
     if (!validarPrecioAfiliados()) {

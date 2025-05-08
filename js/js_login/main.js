@@ -80,11 +80,11 @@ btnEnviar.addEventListener("click", function(event){
     
     if(! validarCorreo()){
         isValid = false;
-        mensajeError += "<p>El correo es invalido</p>";
+        mensajeError += "<p>El correo es inválido</p>";
     }//length<3
     if(! validarPassword()){
         isValid = false;
-        mensajeError += "<p>La contraseña es invalida</p>";
+        mensajeError += "<p>La contraseña es inválida</p>";
     }
 
     //Marcar errores en color rojo 

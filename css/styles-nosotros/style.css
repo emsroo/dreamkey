@@ -313,3 +313,13 @@ div.row div.col div.card div.card-body h5.card-title{
     margin-bottom: 15px;
   }
   
+  #txtDescripcion{
+    text-align: center;
+    padding-top: 15px;
+    font-size: medium;
+  }
+  .txtCardMV{
+    text-align: center;
+    padding-top: 15px;
+    font-size: medium;
+  }

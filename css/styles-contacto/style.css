@@ -291,4 +291,13 @@ div.contacto{
   border-color: var(--button-color);
   background-color:var(--button-color);
 }
-  
+
+.contact-info{
+padding-top: 15px;
+}
+
+.txtInfo{
+  font-size: 16px;
+  color: var(--p-color);
+  margin-top: 10px;
+}

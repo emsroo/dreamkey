@@ -286,4 +286,9 @@ div.contacto{
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+.navbar-toggler {
+  border-color: var(--button-color);
+  background-color:var(--button-color);
+}
   

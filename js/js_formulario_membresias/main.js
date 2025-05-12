@@ -32,7 +32,7 @@ function validarNombre() {
 
 //Cambié la expresión regular para que pueda permitir mejores inputs
 function validarPrecioPublico() {
-    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:(?:[1-9]\d{0,2}(?:,\d{3})+)|(?:[1-9]\d*))(?:\.\d{1,2})?$/);
+    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:[1-9]\d*)(?:\.\d{1,2})?$/);
     if (regex.test(precioPublico.value)) {
         return true;
     }
@@ -41,7 +41,7 @@ function validarPrecioPublico() {
 
 //Cambié la expresión regular para que pueda permitir mejores inputs
 function validarPrecioAfiliados() {
-    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:(?:[1-9]\d{0,2}(?:,\d{3})+)|(?:[1-9]\d*))(?:\.\d{1,2})?$/);
+    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:[1-9]\d*)(?:\.\d{1,2})?$/);
     if (regex.test(precioAfiliados.value)) {
         return true;
     }
@@ -161,8 +161,8 @@ btnEnviar.addEventListener("click", function (event) {
         let img_name = imageUrlInput.files[0].name;
 
         let nombre = txtName.value;
-        let precioPublicoVal = precioPublico.value;
-        let precioAfiliadosVal = precioAfiliados.value;
+        let precioPublicoVal = parseFloat(precioPublico.value); //Convertimos los precios en float
+        let precioAfiliadosVal = parseFloat(precioAfiliados.value);//Convertimos los precios en float
         let descripcionVal = descripcion.value;
 
         // Se Configuran los parámetros de Cloudinary

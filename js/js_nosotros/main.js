@@ -1,5 +1,6 @@
 import { items } from './nosotros_data.js';
 
+
 function addItem(item, index) {
     const modalId = `staticBackdrop-${index}`;
     const itemHTML = `

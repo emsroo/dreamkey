@@ -1,4 +1,5 @@
 import {items} from './afiliados-data.js';
+
 function addItem(item) {
     const itemHTML =
         '   <div class="col">\n'+
@@ -19,3 +20,4 @@ function addItem(item) {
 }
 
 items.forEach(addItem);
+

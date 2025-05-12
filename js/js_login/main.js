@@ -15,6 +15,40 @@ txtEmail.addEventListener("blur", function (event) {
     txtEmail.value = txtEmail.value.trim().toLowerCase();
 });
 
+function actualizarHeader() {
+    const cerrarSesion = document.getElementById('cerrarSesion');
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        if (isLoggedIn === 'true') {
+            cerrarSesion.innerHTML = `
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html" id="logoutLink">Cerrar Sesión</a>
+                </li>
+            `;
+
+            const logoutLink = cerrarSesion.querySelector('#logoutLink');
+
+            if (logoutLink) {
+                logoutLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    localStorage.removeItem('isLoggedIn');
+                    actualizarHeader();
+                    window.location.href = './index.html';
+                });
+            }
+
+        } else {
+            cerrarSesion.innerHTML = `
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">Iniciar Sesion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./register.html">Registro</a>
+                </li>
+            `;
+        }
+}
+
 function mostrarError(mensajeError) {
     cuadroDeAlerta.insertAdjacentHTML("beforeend",
         `
@@ -34,6 +68,9 @@ function validarPassword(usuario, passwordIngresada){
     return usuario.Password === passwordIngresada;
 }
 
+// Llamar a actualizarHeader al cargar la página para establecer el estado inicial del menú
+actualizarHeader();
+
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -51,7 +88,7 @@ btnEnviar.addEventListener("click", function (event) {
     if (!usuario) {
         mensajeError += `<p>Correo no registrado.</p>`
         txtEmail.style.borderColor = "red";
-        isValid = false; 
+        isValid = false;
     }else{
         txtEmail.style.borderColor = "";
     }
@@ -67,32 +104,29 @@ btnEnviar.addEventListener("click", function (event) {
 
     if (isValid) {
 
-        localStorage.setItem('isLoggedIn', 'true'); // Establece el indicador de sesión
-        // Llama a actualizarHeader después del login
+        localStorage.setItem('isLoggedIn', 'true');
+
         Swal.fire({
-                title: "Bienvenido",
-                icon: "success",
-                timer: 2000,
-                showConfirmButton: false
+            title: "Bienvenido",
+            icon: "success",
+            timer: 2000,
+            showConfirmButton: false
         });
 
         //console.log("Bienvenido: " + usuario.Email + " con contrasenia: " + passwordIngresada);
-        
+
         // Limpiamos
         txtEmail.value="";
-        password.value = ""; 
+        password.value = "";
 
-        //se redirecciona a la página home, una vez iniciada la sesión 
+        //se redirecciona a la página home, una vez iniciada la sesión
         setTimeout(function () {
             window.location.href = 'index.html';
         }, 2000);
 
+        actualizarHeader();
+
     } else {
         mostrarError(mensajeError);
     }
-
-    
-
 });//btnEnviar
-
-

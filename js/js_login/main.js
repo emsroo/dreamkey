@@ -102,7 +102,6 @@ btnEnviar.addEventListener("click", function(event){
     if(isValid){
 
         let elemento = {
-                        "Nombre" : txtName.value,
                         "Email" : txtEmail.value,
                         "Password" :password.value
         }
@@ -122,9 +121,17 @@ btnEnviar.addEventListener("click", function(event){
             //text: "You clicked the button!",
             icon: "success"
         });
+        //se redirecciona a la página home, una vez iniciada la sesión
+        window.location.href = 'index.html';
         
+
     } else {
         mostrarError(mensajeError);
     }
 
 });//btnEnviar
+
+
+ 
+    
+   

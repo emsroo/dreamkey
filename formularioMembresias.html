@@ -101,6 +101,72 @@
         </footer>
 
     </div>
+ <script>
+
+        const loginContainer = document.getElementById('login-container');
+        const logoutContainer = document.getElementById('logout-container');
+        const loginButton = document.getElementById('login-button');
+        const logoutButton = document.getElementById('logout-button');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const welcomeMessage = document.getElementById('welcome-message');
+
+        // Función para obtener usuarios del localStorage
+        function obtenerUsuarios() {
+            const usuariosString = localStorage.getItem('usuarios');
+            try {
+                return usuariosString ? JSON.parse(usuariosString) : [];
+            } catch (error) {
+                console.error('Error al parsear usuarios del localStorage:', error);
+                return [];
+            }
+        }
+
+        loginButton.addEventListener('click', () => {
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+            const usuarios = obtenerUsuarios();
+
+            // Buscar el usuario en la lista
+            const usuarioValido = usuarios.find(user => user.username === username && user.password === password);
+
+            if (usuarioValido) {
+                alert('Login exitoso');
+                loginContainer.style.display = 'none';
+                logoutContainer.style.display = 'block';
+                welcomeMessage.textContent = `Bienvenido, ${usuarioValido.username}!`;
+                // Opcionalmente, guardar el estado de sesión
+                localStorage.setItem('sesionActiva', 'true');
+                localStorage.setItem('usuarioLogueado', usuarioValido.username);
+            } else {
+                alert('Credenciales incorrectas');
+            }
+
+            // Limpiar los campos después de intentar el login
+            usernameInput.value = '';
+            passwordInput.value = '';
+        });
+
+        logoutButton.addEventListener('click', () => {
+            alert('Sesión cerrada');
+            loginContainer.style.display = 'block';
+            logoutContainer.style.display = 'none';
+            welcomeMessage.textContent = '';
+            // Limpiar el estado de sesión
+            localStorage.removeItem('sesionActiva');
+            localStorage.removeItem('usuarioLogueado');
+        });
+
+        // Verificar si hay una sesión activa al cargar la página
+        window.onload = () => {
+            if (localStorage.getItem('sesionActiva') === 'true') {
+                loginContainer.style.display = 'none';
+                logoutContainer.style.display = 'block';
+                const usuarioLogueado = localStorage.getItem('usuarioLogueado');
+                welcomeMessage.textContent = `Bienvenido de nuevo, ${usuarioLogueado}!`;
+            }
+        };
+</script> 
 
     <script>
         //Cargar el conetenido de header

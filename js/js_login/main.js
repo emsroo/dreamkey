@@ -116,6 +116,8 @@ btnEnviar.addEventListener("click", function(event){
         password.value="";
         txtEmail.focus();
 
+        localStorage.setItem('isLoggedIn', 'true'); // Establece el indicador de sesión
+        // Llama a actualizarHeader después del login
         Swal.fire({
             title: "Ingreso con exito",
             //text: "You clicked the button!",
@@ -123,13 +125,15 @@ btnEnviar.addEventListener("click", function(event){
         });
         //se redirecciona a la página home, una vez iniciada la sesión
         window.location.href = 'index.html';
-        
-
+    
     } else {
         mostrarError(mensajeError);
     }
 
+    
+
 });//btnEnviar
+
 
 
  

@@ -4,7 +4,7 @@
 export function guardarUsuario(clave, usuarios) {
     //revisar el tipo de params.
     if (!Array.isArray(usuarios)) {
-        console.error('En guardarMembresia se esperaba un arreglo válido.');
+        console.error('En guardar Membresia se esperaba un arreglo válido.');
         return;
     }
     

@@ -117,7 +117,7 @@ btnEnviar.addEventListener("click", function (event) {
         txtEmail.focus();
 
         Swal.fire({
-            title: "Ingreso con exito",
+            title: "Ingresó con éxito",
             //text: "You clicked the button!",
             icon: "success",
             timer: 2000,

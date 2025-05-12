@@ -45,7 +45,10 @@
         fetch("navTemplete.html")
             .then(response => response.text())
             .then(data => {
-                document.getElementById("header").innerHTML = data;
+        document.getElementById("header").innerHTML = data;
+        const script = document.createElement('script');
+        script.src = './js/js_membresias/main.js';
+        document.body.appendChild(script);
             });
     </script>
     <script>
@@ -58,7 +61,6 @@
     </script>
 
     <!-- Creamos las cards -->
-    <script src="./js/js_membresias/main.js" type="module"></script>
     <!-- Agrgamos script que carga las membresias del localStorage al HTML -->
     <script type="module" src="./js/js_membresias/loadMembresias.js"></script>
 

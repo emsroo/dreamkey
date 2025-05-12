@@ -60,6 +60,10 @@
           .then(response => response.text())
           .then(data => {
               document.getElementById("header").innerHTML = data;
+              const script = document.createElement('script');
+              script.src = './js/js_index/main.js';
+              document.body.appendChild(script);
+
           });
       </script>
       <script>

@@ -67,6 +67,9 @@ btnEnviar.addEventListener("click", function (event) {
 
     if (isValid) {
 
+        // Guardar al usuario logueado en localStorage
+        localStorage.setItem("UsuarioLogueado", JSON.stringify(usuario));
+
         Swal.fire({
                 title: "Bienvenido",
                 icon: "success",

@@ -35,14 +35,12 @@
 
     </div>
 
+    <!-- Cargar Navbar -->
+    <script src="./js/js_navTemplete/main.js"></script>
     <script>
-        //Cargar el conetenido de header
-        fetch("navTemplete.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-            });
+        cargarNavbar();
     </script>
+    
     <script>
         //Cargar el conetenido de footer
         fetch("footerTemplate.html")

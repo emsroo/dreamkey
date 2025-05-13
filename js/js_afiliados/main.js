@@ -1,7 +1,7 @@
 import {items} from './afiliados-data.js';
 function addItem(item) {
     const itemHTML =
-        '   <div class="col">\n'+
+        '   <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex">\n' +
         '       <div class="card">\n'+
         '                <a href="./empresaDetail.html?name=' + encodeURIComponent(item.name) + '">\n' +
         '               <img src="' + item.img + '" class="card-img-top" alt="' + item.name + '">\n' +

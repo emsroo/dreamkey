@@ -23,76 +23,47 @@
     <!-- MAIN -->
     <main>
 
-      <div class="jumbotron">
-        <h1 class="display-1">Dreamkeys</h1>
-        <p class="lead">Únete a DreamKey hoy y conscíentete como mereces.</p>
-        <hr class="my-6">
-        <p>Obtendrás acceso exclusivo a contenido premium, descuentos especiales y atención personalizada además te unes
-          a
-          una comunidad comprometida con el crecimiento y la excelencia.</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-yellow" href="./register.html " role="button">Adquiere tu membresia</a>
-        </p>
-      </div>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1 class="display-1">Dreamkey</h1>
+      <p class="lead">Descubre DreamKey: Tu acceso exclusivo a la belleza sin complicaciones</p>
+      <hr class="my-6">
+      <p style="font-size: medium; text-align: left;">Bienvenido a DreamKey, la plataforma que transforma la manera en que accedes a servicios de belleza. Con nuestra membresía digital, disfrutarás de una experiencia sin estrés, diseñada para que ahorres tiempo y maximices beneficios</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-yellow" href="./register.html" role="button">Adquiere tu membresía</a>
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="./assets/img-index/SalonBelleza.png" class="img-fluid rounded-end" style="padding:20px ;" alt="Dreamkey">
+    </div>
+  </div>
+</div>
 
-      <h2 class="secciones">Nuestros servicios</h2>
+      <h2 class="secciones">Nuestros paquetes mas adquiridos</h2>
 
       <!-- Nuestros Servicios -->
-      <div class="contenedor-servicios">
-        <div class="container my-5">
-          <div class="row justify-content-center">
-            <div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
-              <img src="./assets/img-nosotros/Adan-Olea.jpeg" class="img-fluid img-mini" alt="Adan-Olea">
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
-              <img src="./assets/img-nosotros/Ariadna-Fragoso.jpeg" class="img-fluid img-mini" alt="Ariadna-Fragoso">
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
-              <img src="./assets/img-nosotros/Bruno-Velasco.jpeg" class="img-fluid img-mini" alt="Bruno-Velasco">
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
-              <img src="./assets/img-nosotros/Emmanuel-Rojas.jpeg" class="img-fluid img-mini" alt="Emmanuel-Rojas">
-            </div>
-            <!-- Agrega más imágenes aquí si quieres -->
-          </div>
-        </div>
-      </div>
+      <div class="card-group" id="card-container"></div>
 
 
-      <h2 class="secciones">Conoce nuestros negocios afiliados...</h2>
+
+      <h2 class="secciones">Conoce a nuestros negocios afiliados...</h2>
 
       <!-- carousel -->
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators" id="carousel-indicators"></div>
+          <div class="carousel-inner" id="carousel-inner"></div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-inner carousel-size">
-          <div class="carousel-item active">
-            <img src="./assets/img-nosotros/Adan-Olea.jpeg" class="d-block w-100 " alt="Adan-Olea">
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img-nosotros/Ariadna-Fragoso.jpeg" class="d-block w-100 " alt="Ariadna-Fragoso">
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img-nosotros/Bruno-Velasco.jpeg" class="d-block w-100 " alt="Bruno-Velasco">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
-      </div>
+
 
 
       <h2 class="reviews">Reviews</h2>
@@ -124,12 +95,14 @@
         document.getElementById("footer").innerHTML = data;
       });
   </script>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
    </script>
    <script src="./js/js_navbar/navbar-session.js"></script>
+   <script type="module" src="./js/js_index/main.js"></script>
+   <script src="./js/js_index/membresias.js"></script>
 </body>
 
 </html>

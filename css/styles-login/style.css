@@ -70,7 +70,7 @@ html {
 
 input.form-control {
   background-color: #D2CBCB;
-
+  width: 70%;
 
 }
 
@@ -121,4 +121,16 @@ div.register{
   min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  
+}
+#recuerdame{
+  justify-content: center;
+  display: flex;
+  /* text-align: center; */
+   /* padding-left: 90px; */
+}
+.negrita {
+  text-align: center; /* CAMBIO SUGERIDO: De 'left' a 'center' para centrar el título "Login".
+                         Si prefieres que permanezca alineado a la izquierda dentro del bloque
+                         'main' (que ahora está centrado), puedes omitir este cambio. */
 }

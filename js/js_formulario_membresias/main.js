@@ -9,6 +9,8 @@ const precioPublico = document.getElementById("precio-publico");
 const precioAfiliados = document.getElementById("precio-afiliados");
 //Variable de acceso al elemento descripcion
 const descripcion = document.getElementById("descripcion");
+//Variable de acceso al elemento de la categoría
+const categoria = document.getElementById("categoria");
 
 // Cuadro que muestra los errores en los campos de datos
 const cuadroDeAlerta = document.getElementById("error-msg");
@@ -55,6 +57,10 @@ function validarDescripcion() {
     return false;
 }//Validar Descripcion
 
+function validarCategoria(){
+    return categoria.value !== "";
+}//validarCategoria
+
 //Creamos la funcion de Validar Imagen
 //Esta funcion solo verifica si tiene o no contenido el apartado, se puede mejorar quizas verificando el tamaño, tipo de imagen "jpeg", "web","jpg", etc
 //Igualmente se puede mejorar quizás con el tamaño permitido
@@ -78,8 +84,6 @@ function mostrarError(mensajeError) {
     );
 }
 
-//Aquí creamos un evento qu se activa cuando el usuario selecciona uno o más archivos desde su sistema
-//imageUrlInput.addEventListener("change", validarImagen);
 
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
@@ -118,6 +122,11 @@ btnEnviar.addEventListener("click", function (event) {
         mensajeError += "<p>Agregar descripción</p>";
     }//validarNumero
 
+    if(!validarCategoria()){
+        isValid = false;
+        mensajeError += "<p>Se necesita escoger una categoría</p>";
+    }//validarCategoria
+
     if (!validarImagen()) {
         isValid = false;
         mensajeError += "<p>Se necesita agregar una imagen</p>";
@@ -139,6 +148,12 @@ btnEnviar.addEventListener("click", function (event) {
         precioAfiliados.style.borderColor = "red";
     } else {
         precioAfiliados.style.borderColor = "";
+    }
+
+    if (!validarCategoria()){
+        categoria.style.borderColor = "red";
+    }else{
+        categoria.style.borderColor = "";
     }
 
     if (!validarDescripcion()) {
@@ -163,6 +178,7 @@ btnEnviar.addEventListener("click", function (event) {
         let nombre = txtName.value;
         let precioPublicoVal = parseFloat(precioPublico.value); //Convertimos los precios en float
         let precioAfiliadosVal = parseFloat(precioAfiliados.value);//Convertimos los precios en float
+        let tipoMembresia = categoria.value;
         let descripcionVal = descripcion.value;
 
         // Se Configuran los parámetros de Cloudinary
@@ -187,12 +203,14 @@ btnEnviar.addEventListener("click", function (event) {
                         "price1": precioPublicoVal,
                         "price2": precioAfiliadosVal,
                         "description": descripcionVal,
+                        "tipoMembresia": tipoMembresia,
                         "Imagen": img_name,
                         "img": data.secure_url,
                     };
 
                     //Guardamos en el localStorage
                     guardarMembresia(nombre, elemento);
+                    //console.log(categoria.value);
 
                     //Aqui le hago push al arreglo, pero aqui en vez de un arreglo podemos usar la funcion "addItem" como hicimos para crear las cards
                     //Talque seria "addItem(elemento)"";
@@ -214,6 +232,7 @@ btnEnviar.addEventListener("click", function (event) {
         precioPublico.value = "";
         precioAfiliados.value = "";
         descripcion.value = "";
+        categoria.value = "";
         imageUrlInput.value = "";
 
         Swal.fire({

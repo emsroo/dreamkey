@@ -74,13 +74,21 @@
                                                 placeholder="Ejemplo: Esta membresía abarca salones de belleza, barberias, spa.."
                                                 required></textarea>
                                         </div>
+                                        <label for="categoria" class="form-label">Selecciona una categoría</label>
+                                        <select class="form-select" aria-label="Default select example" id="categoria" required>
+                                            <option selected disabled value=""   >Categoría</option>
+                                            <option value="Básico">Básico</option>
+                                            <option value="Estándar">Estándar</option>
+                                            <option value="Premium">Premium</option>
+                                        </select>
+                                        </br>
                                         <div class="mb-3">
                                             <label for="upload_widget" class="form-label">Ingresa imagen de la
                                                 membresía</label>
                                             <input id="upload_widget" class=" form-control" type="file">
                                         </div>
                                         <div class="col-4">
-                                            <button type="submit" class="btn btn-custom" id="btnEnviar">Subir</button>
+                                            <button type="submit" class="btn btn-custom" id="btnEnviar">Subir membresía</button>
                                         </div>
                                     </form>
                                 </div>

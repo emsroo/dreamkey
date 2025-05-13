@@ -51,6 +51,13 @@ html {
 
 }
 
+main {
+  /* min-height: calc(100vh - altura_header - altura_footer); */
+  /* min-height: calc(100vh - 89px - 104px - 1000px); */
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+}
 
 .password {
   display: flex;

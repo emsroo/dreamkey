@@ -14,13 +14,13 @@ html{
     --color1-color: #E8ABEB;
     --color2-color: #EACCEB;
     --color3-color: #D2CBCB;
-    --color4-color: #FFFFFF;
+    --color4-color: #E5EAF4;
     --color5-color: #000000;
 
 }
 
 body{
-    background-color: var(--color4-color) !important;
+    background-color: #E5EAF4 !important;
 }
 
 .btn-primary{

@@ -1,4 +1,14 @@
 export function addItem(item) {
+        const precio1 = new Intl.NumberFormat("es-MX", {
+        style: "currency",
+        currency: "MXN"
+    }).format(item.price1);
+
+    const precio2 = new Intl.NumberFormat("es-MX", {
+        style: "currency",
+        currency: "MXN"
+    }).format(item.price2);
+
     const itemHTML = `
         <div class="col-sm-6 col-md-6 col-lg-4">
             <div class="card w-auto mb-4">
@@ -11,9 +21,9 @@ export function addItem(item) {
                 <div class="card-body">
                     <img src="${item.img}" class="card-img-top" alt="${item.name}">
                     <h5 class="card-title">Precio público</h5>
-                    <p class="card-text1 text-center">$${item.price1}</p>
+                    <p class="card-text1 text-center">${precio1}</p>
                     <h4 class="card-title">Precio con descuento</h4>
-                    <p class="card-text2">$${item.price2}</p>
+                    <p class="card-text2">${precio2}</p>
                 </div>
             </div>
         </div>

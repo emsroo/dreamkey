@@ -74,6 +74,27 @@ function validarImagen() {
     }
 }//validarImagen
 
+function obtenerNuevoId() {
+    // Obtenemos todas las claves del localStorage
+    const claves = Object.keys(localStorage);
+    let maxId = 6; // Asumimos que ya existen 6 membresías por default
+
+    claves.forEach(clave => {
+        try {
+            const obj = JSON.parse(localStorage.getItem(clave));
+            if (obj && obj.id && typeof obj.id === "number") {
+                if (obj.id > maxId) {
+                    maxId = obj.id; //Aplicamos la logica de saber el numero mayor
+                }
+            }
+        } catch (e) {
+
+        }
+    });
+
+    return maxId + 1;
+}
+
 function mostrarError(mensajeError) {
     cuadroDeAlerta.insertAdjacentHTML("beforeend",
         `
@@ -181,6 +202,8 @@ btnEnviar.addEventListener("click", function (event) {
         let tipoMembresia = categoria.value;
         let descripcionVal = descripcion.value;
 
+        let id = obtenerNuevoId();//Llamamos a la funcion para incrementar el id
+
         // Se Configuran los parámetros de Cloudinary
         // Aqui estoy usando la url API y "upload_preset" pero podemos crear una cuenta general para la pagina
         const formData = new FormData();
@@ -199,6 +222,7 @@ btnEnviar.addEventListener("click", function (event) {
 
                     //Creamos el JSON con la informacion del formulario
                     let elemento = {
+                        "id": id,
                         "name": nombre,
                         "price1": precioPublicoVal,
                         "price2": precioAfiliadosVal,

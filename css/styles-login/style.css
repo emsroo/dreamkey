@@ -141,3 +141,11 @@ div.register{
                          Si prefieres que permanezca alineado a la izquierda dentro del bloque
                          'main' (que ahora está centrado), puedes omitir este cambio. */
 }
+
+.mb-3{
+  padding-top: 20px;
+}
+
+#btnEnviar{
+  margin-top: 15px;
+}

@@ -37,7 +37,14 @@ li {
 
 body {
   font-family: 'MagallanesRegular', sans-serif;
-  background-color: var(--bg-color);
+}
+
+.registro-bg{
+  background-image: url("../../assets/registro_2.jpg");
+  background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    
 }
 /* agregar fuentes */
 @font-face {
@@ -48,10 +55,37 @@ body {
   font-family: 'MagallanesBold';
   src: url('../../assets/font/MagallanesBold.otf') format('opentype');
 }
-.form-section{
-  font-family: 'MagallanesRegular', sans-serif;
-  text-align:left;
-  
+
+.form-section {
+    font-family: 'MagallanesRegular', sans-serif;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.6); /* Un blanco semitransparente */
+    padding: 50px; /* Para dar espacio alrededor del texto */
+    border-radius: 8px; /* Opcional: bordes redondeados *//* Opcional: para limitar el ancho del contenido */
+    margin: 50px auto; /* Para centrarlo horizontalmente si tiene un max-width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: una sombra suave */
+}
+
+/* Color for paragraphs and list items inside the form section */
+.form-section p,
+.form-section ul li {
+    color: #221132; /* Using your --p-color variable's value */
+}
+
+/* Color for headings inside the form section */
+.form-section h2 {
+    color: #221132; /* A dark color for better contrast */
+}
+
+/* Style for the link within the form section */
+.form-section a {
+    color: #007bff; /* A standard blue for links, or choose a color from your palette */
+    text-decoration: underline;
+}
+
+/* Ensure placeholder text is visible (this targets all input fields) */
+.form-control::placeholder {
+    color: #6c757d; /* A darker gray for better visibility */
 }
 /* termina  fuentes */
 
@@ -229,14 +263,12 @@ div.row div.col{
   cursor: pointer;
 }
 
-.form-section {
-  padding-top: 5rem;
-}
 .card {
-  background-color: #e5eaf4;
+  background-color: black;
   border: none;
   padding: 20px;
 }
+
 .btn-custom {
   background-color: #ffce00;
   border: none;

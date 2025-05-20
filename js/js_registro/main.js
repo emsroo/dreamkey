@@ -176,7 +176,7 @@ btnEnviar.addEventListener("click", function (event) {
             "Email": txtEmail.value,
             "Password": password.value
         }
-
+            
         //Guardamos el objeto "usuario" en el arreglo "usuarios"
         usuarios.push(usuario);
         guardarUsuario('Usuarios',usuarios);

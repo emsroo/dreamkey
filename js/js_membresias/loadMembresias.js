@@ -11,7 +11,7 @@ window.addEventListener("load", function(event) {
             const data = JSON.parse(localStorage.getItem(key));
 
             // Verifica si tiene la estructura esperada
-            if (data.name && data.price1 && data.price2 && data.description && data.Imagen && data.img) {
+            if (data.id && data.name && data.price1 && data.price2 && data.description && data.tipoMembresia && data.Imagen && data.img) {
                 addItem(data);
             }
         } catch (e) {

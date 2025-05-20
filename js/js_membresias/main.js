@@ -1,4 +1,14 @@
 export function addItem(item) {
+        const precio1 = new Intl.NumberFormat("es-MX", {
+        style: "currency",
+        currency: "MXN"
+    }).format(item.price1);
+
+    const precio2 = new Intl.NumberFormat("es-MX", {
+        style: "currency",
+        currency: "MXN"
+    }).format(item.price2);
+
     const itemHTML = `
         <div class="col-sm-6 col-md-6 col-lg-4">
             <div class="card w-auto mb-4">
@@ -11,9 +21,9 @@ export function addItem(item) {
                 <div class="card-body">
                     <img src="${item.img}" class="card-img-top" alt="${item.name}">
                     <h5 class="card-title">Precio público</h5>
-                    <p class="card-text1 text-center">${item.price1}</p>
+                    <p class="card-text1 text-center">${precio1}</p>
                     <h4 class="card-title">Precio con descuento</h4>
-                    <p class="card-text2">${item.price2}</p>
+                    <p class="card-text2">${precio2}</p>
                 </div>
             </div>
         </div>
@@ -51,8 +61,8 @@ addItem({
     tipoMembresia: 'Básico',
     img: './assets/img-memebresia/Membresia1.png',
     description: 'Incluye 5 servicios rosas (básicos) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
-    price1: '$700',
-    price2: '$500',
+    price1: '700',
+    price2: '500',
 });
 
 addItem({
@@ -61,8 +71,8 @@ addItem({
     tipoMembresia: 'Básico',
     img: './assets/img-memebresia/Membresia2.png',
     description: 'Incluye 10 servicios rosas (básicos) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
-    price1: '$1,200',
-    price2: '$800',
+    price1: '1200',
+    price2: '800',
 });
 
 addItem({
@@ -71,8 +81,8 @@ addItem({
     tipoMembresia: 'Estándar',
     img: './assets/img-memebresia/Membresia3.png',
     description: 'Incluye 5 servicios platino (Estándar) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
-    price1: '$1,200',
-    price2: '$800',
+    price1: '1200',
+    price2: '800',
 });
 
 addItem({
@@ -81,8 +91,8 @@ addItem({
     tipoMembresia: 'Estándar',
     img: './assets/img-memebresia/Membresia4.png',
     description: 'Incluye 10 servicios platino (Estándar) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
-    price1: '$1,800',
-    price2: '$1,200',
+    price1: '1800',
+    price2: '1200',
 });
 
 addItem({
@@ -91,8 +101,8 @@ addItem({
     tipoMembresia: 'Premium',
     img: './assets/img-memebresia/Membresia5.png',
     description: 'Incluye 5 servicios oro (Premium) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
-    price1: '$1,800',
-    price2: '$1,200',
+    price1: '1800',
+    price2: '1200',
 });
 
 
@@ -102,8 +112,8 @@ addItem({
     tipoMembresia: 'Premium',
     img: './assets/img-memebresia/Membresia6.png',
     description: 'Incluye 10 servicios oro (Premium) y puedes utilizarlas en las empresas afiliadas en el programa, consulta en la página de afiliados que empresas están disponibles con este nivel.',
-    price1: '$3,500',
-    price2: '$2,000',
+    price1: '3500',
+    price2: '2000',
 });
 
 function actualizarHeader() {

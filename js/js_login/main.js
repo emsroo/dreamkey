@@ -114,7 +114,12 @@ btnEnviar.addEventListener("click", function (event) {
         });
 
         //console.log("Bienvenido: " + usuario.Email + " con contrasenia: " + passwordIngresada);
+<<<<<<< HEAD
 
+=======
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("currentUser", JSON.stringify(usuario));
+>>>>>>> 8ea48c7d935b53b6309493aedbad6972eca12ede
         // Limpiamos
         txtEmail.value="";
         password.value = "";

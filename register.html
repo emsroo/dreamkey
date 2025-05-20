@@ -9,7 +9,7 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/styles-registro/style.css">
-   <!-- dreamkey\css\style-registro\style.css -->
+    <!-- dreamkey\css\style-registro\style.css -->
     <title>Registro</title>
 </head>
 
@@ -31,9 +31,10 @@
                     <div class="row content-center">
 
                         <!-- Columna izquierda (info Text)  -->
-                        <div class="col-12 col-lg-6 mb-4">
+                        <div class="col-12 col-lg-6 mb-4 ps-5">
                             <h2><strong>Regístrate en DreamKey</strong></h2>
-                            <p style="font-size: 20px;"><strong>DreamKey</strong> es una plataforma e-commerce que conecta usuarios con servicios
+                            <p style="font-size: 20px;"><strong>DreamKey</strong> es una plataforma e-commerce que
+                                conecta usuarios con servicios
                                 de
                                 belleza a través de una membresía digital.</p>
                             <p style="font-size: medium;"><strong>Para clientes:</strong></p>
@@ -51,36 +52,39 @@
                         </div>
 
                         <!-- Columna derecha -->
-                        <div class="col-12 col-lg-6 mb-4">
+                        <div class="col-12 col-lg-6 mb-4 ps-5">
                             <div class="container-fluid">
                                 <div class="row justify-content-center">
-                                    <form>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="Nombre de perfil"
-                                                id="nom">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="telefono" class="form-control" placeholder="Teléfono"
-                                                id="telefono">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="email" class="form-control" placeholder="Correo"
-                                                id="email-address">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="password" class="form-control" placeholder="Contraseña"
-                                                id="password">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="password" class="form-control"
-                                                placeholder="Confirma la contraseña" id="confirmPassword">
-                                        </div>
-                                        <button type="submit" class="btn btn-warning w-100"
-                                            id="btnEnviar">Registrarse</button>
-                                    </form>
-                                    <div id="error-msg"></div>
-                                    <p class="mt-3">Si tienes una cuenta en DreamKey haz click <a
-                                            href="./login.html">aquí</a></p>
+                                    <div class="card rounded-4 p-4">
+
+                                        <form>
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" placeholder="Nombre de perfil"
+                                                    id="nom">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="telefono" class="form-control" placeholder="Teléfono"
+                                                    id="telefono">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" placeholder="Correo"
+                                                    id="email-address">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="password" class="form-control" placeholder="Contraseña"
+                                                    id="password">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="password" class="form-control"
+                                                    placeholder="Confirma la contraseña" id="confirmPassword">
+                                            </div>
+                                            <button type="submit" class="btn btn-warning w-100"
+                                                id="btnEnviar">Registrarse</button>
+                                        </form>
+                                        <div id="error-msg"></div>
+                                        <p class="mt-3">Si tienes una cuenta en DreamKey haz click <a
+                                                href="./login.html">aquí</a></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -129,6 +133,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./js/js_registro/main.js" type="module"></script>
     <script src="./js/js_registro/guardarUsuario.js" type="module"></script>
+    <script src="./js/js_navbar/navbar-session.js"></script>
+    </script>
     <!-- Esto es para las alertas bonitas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

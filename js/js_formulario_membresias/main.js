@@ -9,6 +9,8 @@ const precioPublico = document.getElementById("precio-publico");
 const precioAfiliados = document.getElementById("precio-afiliados");
 //Variable de acceso al elemento descripcion
 const descripcion = document.getElementById("descripcion");
+//Variable de acceso al elemento de la categoría
+const categoria = document.getElementById("categoria");
 
 // Cuadro que muestra los errores en los campos de datos
 const cuadroDeAlerta = document.getElementById("error-msg");
@@ -55,6 +57,10 @@ function validarDescripcion() {
     return false;
 }//Validar Descripcion
 
+function validarCategoria(){
+    return categoria.value !== "";
+}//validarCategoria
+
 //Creamos la funcion de Validar Imagen
 //Esta funcion solo verifica si tiene o no contenido el apartado, se puede mejorar quizas verificando el tamaño, tipo de imagen "jpeg", "web","jpg", etc
 //Igualmente se puede mejorar quizás con el tamaño permitido
@@ -68,6 +74,27 @@ function validarImagen() {
     }
 }//validarImagen
 
+function obtenerNuevoId() {
+    // Obtenemos todas las claves del localStorage
+    const claves = Object.keys(localStorage);
+    let maxId = 6; // Asumimos que ya existen 6 membresías por default
+
+    claves.forEach(clave => {
+        try {
+            const obj = JSON.parse(localStorage.getItem(clave));
+            if (obj && obj.id && typeof obj.id === "number") {
+                if (obj.id > maxId) {
+                    maxId = obj.id; //Aplicamos la logica de saber el numero mayor
+                }
+            }
+        } catch (e) {
+
+        }
+    });
+
+    return maxId + 1;
+}
+
 function mostrarError(mensajeError) {
     cuadroDeAlerta.insertAdjacentHTML("beforeend",
         `
@@ -78,8 +105,6 @@ function mostrarError(mensajeError) {
     );
 }
 
-//Aquí creamos un evento qu se activa cuando el usuario selecciona uno o más archivos desde su sistema
-//imageUrlInput.addEventListener("change", validarImagen);
 
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
@@ -118,6 +143,11 @@ btnEnviar.addEventListener("click", function (event) {
         mensajeError += "<p>Agregar descripción</p>";
     }//validarNumero
 
+    if(!validarCategoria()){
+        isValid = false;
+        mensajeError += "<p>Se necesita escoger una categoría</p>";
+    }//validarCategoria
+
     if (!validarImagen()) {
         isValid = false;
         mensajeError += "<p>Se necesita agregar una imagen</p>";
@@ -139,6 +169,12 @@ btnEnviar.addEventListener("click", function (event) {
         precioAfiliados.style.borderColor = "red";
     } else {
         precioAfiliados.style.borderColor = "";
+    }
+
+    if (!validarCategoria()){
+        categoria.style.borderColor = "red";
+    }else{
+        categoria.style.borderColor = "";
     }
 
     if (!validarDescripcion()) {
@@ -163,7 +199,10 @@ btnEnviar.addEventListener("click", function (event) {
         let nombre = txtName.value;
         let precioPublicoVal = parseFloat(precioPublico.value); //Convertimos los precios en float
         let precioAfiliadosVal = parseFloat(precioAfiliados.value);//Convertimos los precios en float
+        let tipoMembresia = categoria.value;
         let descripcionVal = descripcion.value;
+
+        let id = obtenerNuevoId();//Llamamos a la funcion para incrementar el id
 
         // Se Configuran los parámetros de Cloudinary
         // Aqui estoy usando la url API y "upload_preset" pero podemos crear una cuenta general para la pagina
@@ -183,16 +222,19 @@ btnEnviar.addEventListener("click", function (event) {
 
                     //Creamos el JSON con la informacion del formulario
                     let elemento = {
+                        "id": id,
                         "name": nombre,
                         "price1": precioPublicoVal,
                         "price2": precioAfiliadosVal,
                         "description": descripcionVal,
+                        "tipoMembresia": tipoMembresia,
                         "Imagen": img_name,
                         "img": data.secure_url,
                     };
 
                     //Guardamos en el localStorage
                     guardarMembresia(nombre, elemento);
+                    //console.log(categoria.value);
 
                     //Aqui le hago push al arreglo, pero aqui en vez de un arreglo podemos usar la funcion "addItem" como hicimos para crear las cards
                     //Talque seria "addItem(elemento)"";
@@ -214,6 +256,7 @@ btnEnviar.addEventListener("click", function (event) {
         precioPublico.value = "";
         precioAfiliados.value = "";
         descripcion.value = "";
+        categoria.value = "";
         imageUrlInput.value = "";
 
         Swal.fire({

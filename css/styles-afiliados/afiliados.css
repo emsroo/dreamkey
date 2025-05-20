@@ -201,3 +201,20 @@ p {
     display: grid;
     grid-template-rows: auto 1fr auto;
   }
+  .card-text{
+    font-size:large;
+    text-align: center;
+  }
+
+  .card-title{
+    font-size: x-large;
+    text-align: center;
+  }
+.fa-star, .fa-star-half-alt {
+    color: var(--bg-color);
+}
+
+.checked {
+    color: var(--button-color);
+}
+

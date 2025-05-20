@@ -62,7 +62,6 @@ body {
     background-color: rgba(255, 255, 255, 0.6); /* Un blanco semitransparente */
     padding: 50px; /* Para dar espacio alrededor del texto */
     border-radius: 8px; /* Opcional: bordes redondeados *//* Opcional: para limitar el ancho del contenido */
-    margin: 50px auto; /* Para centrarlo horizontalmente si tiene un max-width */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: una sombra suave */
 }
 

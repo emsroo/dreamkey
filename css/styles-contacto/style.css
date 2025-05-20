@@ -39,9 +39,10 @@ body {
 .form-section {
     font-family: 'MagallanesRegular', sans-serif;
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 50px; ;
     margin-top: 50px;
     margin-bottom: 50px;
 

@@ -52,7 +52,7 @@ export const items= [{
     'name': 'Emmanuel Rojas',
     'id':'6',
     'img': '../../assets/img-nosotros/Emmanuel-Rojas.jpeg',
-    'descripción': 'Soy desarrolladora frontend. Actualmente, estoy trabajando en DreamKey, un proyecto innovador de e-commerce en el que colaboro con un equipo diverso. Este proyecto me permite integrar mis conocimientos en programación, creando soluciones eficientes y escalables.',
+    'descripción': 'Soy desarrollador Java Full Stack. Actualmente, estoy trabajando en DreamKey, un proyecto innovador de e-commerce en el que colaboro con un equipo diverso. Este proyecto me permite integrar mis conocimientos en programación, creando soluciones eficientes y escalables.',
     "redes": {
         '0': 'https://github.com/emsroo',
         '1': 'https://www.linkedin.com/in/emmanuel--rojas/',

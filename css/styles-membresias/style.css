@@ -84,3 +84,16 @@ div.membresias{
   #btnCerrar{
     background-color: #221132;
 }
+  .botonCompra{
+    background-color: var(--button-color);
+    border : none;
+    align-content: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: none;
+  }
+    .botonCompra:hover{
+        transform: scale(1.10);
+        display: none;
+  }

@@ -21,9 +21,8 @@ export function addItem(item) {
                 <div class="card-body">
                     <img src="${item.img}" class="card-img-top" alt="${item.name}">
                     <h5 class="card-title">Precio público</h5>
-                    <p class="card-text1 text-center">${precio1}</p>
-                    <h4 class="card-title">Precio con descuento</h4>
-                    <p class="card-text2">${precio2}</p>
+                    <p class="card-text1 text-center">${precio1}</p><br>
+                    <button type="button" class="botonCompra" class="btn btn-primary">Adquiere tu Membresía </button>
                 </div>
             </div>
         </div>

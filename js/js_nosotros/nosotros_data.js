@@ -25,7 +25,7 @@ export const items= [{
     'descripción': 'Desarrollador web full-stack enfocado a la resolución de problemas complejos, análisis de requerimientos y diseño centrado en el usuario.',
     "redes": {
         '0': 'https://github.com/GREGORIO971117',
-        '1': 'www.linkedin.com/in/gregoriogt9711',
+        '1': 'https://www.linkedin.com/in/gregoriogt9711/',
     }
 },
 {
@@ -35,7 +35,7 @@ export const items= [{
     'descripción': 'Ingeniero en computación enfocado en en desarrollo backend aunque estudio para llegar a ser fullstack. Soy un apasionado a la teconologia y me gusta estar aprendiendo sobre las nuevas novedades y actualizarme. Tengo un año de experiencia laboral en IBM como Intern Software Developer en donde logre trabajar en grandes proyectos de desarrollo y soporte.',
     "redes": {
         '0': 'https://github.com/adan2990',
-        '1': 'www.linkedin.com/in/adan-israel-olea-hernandez ',
+        '1': 'https://www.linkedin.com/in/adan-israel-olea-hernandez/',
     }
 },
 {

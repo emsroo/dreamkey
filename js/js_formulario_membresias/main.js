@@ -41,15 +41,6 @@ function validarPrecioPublico() {
     return false;
 }//ValidarPrecio
 
-//Cambié la expresión regular para que pueda permitir mejores inputs
-function validarPrecioAfiliados() {
-    const regex = new RegExp(/^(?!0+(?:\.0{1,2})?$)(?:[1-9]\d*)(?:\.\d{1,2})?$/);
-    if (regex.test(precioAfiliados.value)) {
-        return true;
-    }
-    return false;
-}//ValidarPrecioAfiliados
-
 function validarDescripcion() {
     if (descripcion.value.trim() === "") {
         return true;
@@ -133,11 +124,6 @@ btnEnviar.addEventListener("click", function (event) {
         mensajeError += "<p>El precio a público es inválido</p>";
     }//validarPrecioPublico
 
-    if (!validarPrecioAfiliados()) {
-        isValid = false;
-        mensajeError += "<p>El precio a afiliados es inválido</p>";
-    }//validarPrecioAfiliados
-
     if (descripcion.value.length < 1) {
         isValid = false;
         mensajeError += "<p>Agregar descripción</p>";
@@ -163,12 +149,6 @@ btnEnviar.addEventListener("click", function (event) {
         precioPublico.style.borderColor = "red";
     } else {
         precioPublico.style.borderColor = "";
-    }
-
-    if (!validarPrecioAfiliados()) {
-        precioAfiliados.style.borderColor = "red";
-    } else {
-        precioAfiliados.style.borderColor = "";
     }
 
     if (!validarCategoria()){
@@ -198,7 +178,6 @@ btnEnviar.addEventListener("click", function (event) {
 
         let nombre = txtName.value;
         let precioPublicoVal = parseFloat(precioPublico.value); //Convertimos los precios en float
-        let precioAfiliadosVal = parseFloat(precioAfiliados.value);//Convertimos los precios en float
         let tipoMembresia = categoria.value;
         let descripcionVal = descripcion.value;
 
@@ -225,7 +204,6 @@ btnEnviar.addEventListener("click", function (event) {
                         "id": id,
                         "name": nombre,
                         "price1": precioPublicoVal,
-                        "price2": precioAfiliadosVal,
                         "description": descripcionVal,
                         "tipoMembresia": tipoMembresia,
                         "Imagen": img_name,
@@ -254,7 +232,6 @@ btnEnviar.addEventListener("click", function (event) {
         //Con las siguientes dos lineas limpiamos los valores de los datos
         txtName.value = "";
         precioPublico.value = "";
-        precioAfiliados.value = "";
         descripcion.value = "";
         categoria.value = "";
         imageUrlInput.value = "";

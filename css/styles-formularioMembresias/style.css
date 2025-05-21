@@ -14,6 +14,7 @@ p#text_1{
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: justify;
 }
 
 p#tel{
@@ -59,4 +60,8 @@ p#email{
         width: 300px;
     }
 
+}
+
+.mainbg{
+  background-image: url(../../assets/Diseño\ sin\ título.jpg);
 }

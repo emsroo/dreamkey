@@ -147,5 +147,12 @@ div.register{
 }
 
 #btnEnviar{
-  margin-top: 15px;
+  margin-top: 5px;
 }
+
+    #error-msg {
+      display:flex;
+      justify-content:center
+   
+    
+    }

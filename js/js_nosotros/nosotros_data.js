@@ -68,7 +68,7 @@ export const items= [{
         '1': 'https://www.linkedin.com/in/hector-valdez-arguelles/',
     }
 },
-{
+/*{
     'name': 'Bruno Velazco',
     'id':'8',
     'img': '../../assets/img-nosotros/Bruno-Velasco.jpeg',
@@ -77,4 +77,4 @@ export const items= [{
         '0': 'https://github.com/unBro2786',
         '1': 'https://www.linkedin.com/in/bruno-velasco-bravo/',
     },   
-}]
+}*/]

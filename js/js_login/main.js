@@ -67,6 +67,8 @@ btnEnviar.addEventListener("click", function (event) {
 
     if (isValid) {
 
+        localStorage.setItem("usuarioNombre", usuario.Nombre);
+
         Swal.fire({
                 title: "Bienvenido",
                 icon: "success",

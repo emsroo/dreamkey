@@ -36,10 +36,13 @@
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
+        <li class="nav-item" id="bienvenidoItem" style="display: none;">
+          <a class="nav-link" href="#" id="bienvenidoLink"></a>
+        </li>
+        <li class="nav-item" id="nav-login">
           <a class="nav-link" href="./login.html">Inicia Sesión</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="nav-register">
           <a class="nav-link" href="./register.html">Registro</a>
         </li>
       </ul>
@@ -47,6 +50,45 @@
   </div>
 </nav>
 
-    
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const nombreUsuario = localStorage.getItem("usuarioNombre");
+    const contenedor = document.getElementById("usuario-info");
+
+    if (nombreUsuario) {
+      contenedor.innerHTML = `
+        <li class="nav-item">
+          <span class="nav-link">Hola ${nombreUsuario}</span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="cerrarSesion">Cerrar sesión</a>
+        </li>
+      `;
+
+      // Agrega función para cerrar sesión
+      document.getElementById("cerrarSesion").addEventListener("click", function () {
+        localStorage.removeItem("usuarioNombre");
+        location.reload(); // recarga la página para mostrar nuevamente el login y registro
+      });
+    }
+  });
+</script>
+<!--
+<script>
+  window.onload = function() {
+      const usuarioNombre = localStorage.getItem("usuarioNombre");
+      if (usuarioNombre) {
+          document.getElementById("bienvenidoItem").style.display = "block";
+          document.getElementById("bienvenidoLink").innerText = `Hola, ${nombre}`;
+          document.getElementById("loginItem").style.display = "none";
+          document.getElementById("registerItem").style.display = "none";
+      } else {
+          document.getElementById("bienvenidoItem").style.display = "none";
+          document.getElementById("loginItem").style.display = "block";
+          document.getElementById("registerItem").style.display = "block";
+      }
+  };
+</script>
+-->
 </body>
 </html>

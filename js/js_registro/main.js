@@ -177,9 +177,12 @@ btnEnviar.addEventListener("click", function (event) {
             "Password": password.value
         }
 
-        //Guardamos el objeto "usuario" en el arreglo "usuarios"
-        usuarios.push(usuario);
-        guardarUsuario('Usuarios',usuarios);
+        // Obtener los usuarios previos del localStorage (si existen)
+        let usuariosGuardados = JSON.parse(localStorage.getItem("Usuarios")) || [];
+        usuariosGuardados.push(usuario);
+
+        // Guardar los usuarios actualizados
+        guardarUsuario("Usuarios", usuariosGuardados);
 
         //Imprimimos los datos en la pantalla
         //console.log(datos);

@@ -25,7 +25,7 @@ export const items= [{
     'descripción': 'Desarrollador web full-stack enfocado a la resolución de problemas complejos, análisis de requerimientos y diseño centrado en el usuario.',
     "redes": {
         '0': 'https://github.com/GREGORIO971117',
-        '1': 'www.linkedin.com/in/gregoriogt9711',
+        '1': 'https://www.linkedin.com/in/gregoriogt9711/',
     }
 },
 {
@@ -35,7 +35,7 @@ export const items= [{
     'descripción': 'Ingeniero en computación enfocado en en desarrollo backend aunque estudio para llegar a ser fullstack. Soy un apasionado a la teconologia y me gusta estar aprendiendo sobre las nuevas novedades y actualizarme. Tengo un año de experiencia laboral en IBM como Intern Software Developer en donde logre trabajar en grandes proyectos de desarrollo y soporte.',
     "redes": {
         '0': 'https://github.com/adan2990',
-        '1': 'www.linkedin.com/in/adan-israel-olea-hernandez ',
+        '1': 'https://www.linkedin.com/in/adan-israel-olea-hernandez/',
     }
 },
 {
@@ -52,7 +52,7 @@ export const items= [{
     'name': 'Emmanuel Rojas',
     'id':'6',
     'img': '../../assets/img-nosotros/Emmanuel-Rojas.jpeg',
-    'descripción': 'Soy desarrolladora frontend. Actualmente, estoy trabajando en DreamKey, un proyecto innovador de e-commerce en el que colaboro con un equipo diverso. Este proyecto me permite integrar mis conocimientos en programación, creando soluciones eficientes y escalables.',
+    'descripción': 'Soy desarrollador Java Full Stack. Actualmente, estoy trabajando en DreamKey, un proyecto innovador de e-commerce en el que colaboro con un equipo diverso. Este proyecto me permite integrar mis conocimientos en programación, creando soluciones eficientes y escalables.',
     "redes": {
         '0': 'https://github.com/emsroo',
         '1': 'https://www.linkedin.com/in/emmanuel--rojas/',
@@ -68,7 +68,7 @@ export const items= [{
         '1': 'https://www.linkedin.com/in/hector-valdez-arguelles/',
     }
 },
-{
+/*{
     'name': 'Bruno Velazco',
     'id':'8',
     'img': '../../assets/img-nosotros/Bruno-Velasco.jpeg',
@@ -77,4 +77,4 @@ export const items= [{
         '0': 'https://github.com/unBro2786',
         '1': 'https://www.linkedin.com/in/bruno-velasco-bravo/',
     },   
-}]
+}*/]

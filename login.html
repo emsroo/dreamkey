@@ -20,16 +20,13 @@
         </header>
 
         <!-- Main -->
-        <main>
+        <main class="mainbg">
 
             <div class="bienvenido">
                 <h1>Bienvenido a DreamKey</h1>
         
         
             </div>
-        
-            <h3 class="negrita">Login</h3>
-        
         
         
             <div class="container">
@@ -46,24 +43,22 @@
                         placeholder="********">
         
                 </div>
+                 <div class="form-check" id="recuerdame">
+                    <input class="form-check-input" style="display:none" type="checkbox" id="recuerdame">
+                    <label class="form-check-label" style="display:none"  for="recuerdame">Recuérdame
+                    </label>
+                </div>  
             </div>
         
-            <div id="error-msg"></div>
+            <div id="error-msg" ></div>
         
             <div class="centrar-boton">
-                <button type="button" class="btn btn-warning" id="btnEnviar">LOGIN</button>
+                <button type="button" class="btn btn-warning" id="btnEnviar">Iniciar sesión</button>
             </div>
         
         
-            <div class="recuerdame">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="recuerdame">
-                    <label class="form-check-label" for="recuerdame">Recuérdame
-                    </label>
-                </div>
-        
-        
-        
+            <div class="recuerdame container">
+
             </div>
 
         </main>
@@ -101,6 +96,7 @@
         crossorigin="anonymous"></script>
     <script src="./js/js_login/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/js_navbar/navbar-session.js"></script> </script>
     </script>
 </body>
 

@@ -288,3 +288,6 @@ div.register{
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+.mainbg{
+  background-image: url(../../assets/Diseño\ sin\ título.jpg);
+}

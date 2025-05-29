@@ -301,3 +301,6 @@ padding-top: 15px;
   color: var(--p-color);
   margin-top: 10px;
 }
+.mainbg{
+  background-image: url(../../assets/Diseño\ sin\ título.jpg);
+}

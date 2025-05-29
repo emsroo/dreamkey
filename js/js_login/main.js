@@ -25,14 +25,15 @@ function mostrarError(mensajeError) {
     );
 }
 
-function validarCorreo(email){
+function validarLogin(email,passwordIngresada){
     const usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
-    return usuarios.find(usuario => usuario.Email === email);
-}
+    const usuario =  usuarios.find(usuario => usuario.Email === email);
 
-function validarPassword(usuario, passwordIngresada){
-    return usuario.Password === passwordIngresada;
-}
+    if(usuario && usuario.Password === passwordIngresada){
+        return usuario;
+    }//if
+    return null;
+}//validLogin
 
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
@@ -42,32 +43,23 @@ btnEnviar.addEventListener("click", function (event) {
     // Limpia el mensaje de error
     cuadroDeAlerta.innerHTML = "";
 
-    const passwordIngresada = password.value;
-    const usuario = validarCorreo(txtEmail.value);
+    const usuario = validarLogin(txtEmail.value, password.value); //retorna el usuario o null
 
     //Esto es un Bandera, al ser true permite enviar los datos
     let isValid = true;
 
-    if (!usuario) {
-        mensajeError += `<p>Correo no registrado.</p>`
+    //Validamos login
+    if(!usuario){
+        mensajeError += `<p>Correo o contraseña incorrecta</p>`
         txtEmail.style.borderColor = "red";
-        isValid = false; 
-    }else{
-        txtEmail.style.borderColor = "";
-    }
-
-    // Validar la contraseña (aunque no haya usuario)
-    if (!passwordIngresada || !usuario || !validarPassword(usuario, passwordIngresada)) {
-        mensajeError += `<p>Contraseña incorrecta.</p>`
         password.style.borderColor = "red";
         isValid = false;
-    } else {
-        password.style.borderColor = "";
     }
 
     if (isValid) {
 
         localStorage.setItem("usuarioNombre", usuario.Nombre);
+        console.log(usuario);
 
         Swal.fire({
                 title: "Bienvenido",
@@ -77,7 +69,8 @@ btnEnviar.addEventListener("click", function (event) {
         });
 
         //console.log("Bienvenido: " + usuario.Email + " con contrasenia: " + passwordIngresada);
-        
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("currentUser", JSON.stringify(usuario));
         // Limpiamos
         txtEmail.value="";
         password.value = ""; 
@@ -92,8 +85,4 @@ btnEnviar.addEventListener("click", function (event) {
     }
 
 });//btnEnviar
-
-
-
-
 

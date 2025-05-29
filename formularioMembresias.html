@@ -20,30 +20,29 @@
         </header>
 
         <!-- Main -->
-        <main>
+        <main class="mainbg">
 
             <div class="row justify-content-center m-5">
                 <!-- Agregar membresías -->
                 <div class="col-12 col-lg-6 mb-4">
                     <div class="card-body">
-                        <h5 class="card-title" style="margin: 30px;">Agregar Membresías</h5>
-                        <p class="card-text">
-                            En DreamKey nos importan mucho nuestros colaboradores y clientes. Si quieres buscar más
-                            información puedes enviarnos un mensaje.
+                        <h5 class="card-title" id="titulo_membresias">Impulsa tu negocio y conecta con más clientes</h5>
+                        <p class="card-text" id="text_1">
+                            Agregar una nueva membresía es tu oportunidad para ofrecer experiencias únicas, destacar tus servicios y aumentar tu visibilidad en nuestra comunidad de belleza y bienestar. ¿Tienes un paquete exclusivo o una oferta irresistible? ¡Este es el lugar perfecto para compartirlo! Completa el formulario y permite que más personas descubran lo que tu negocio tiene para ofrecer. ¿Necesitas ayuda? No dudes en contactarnos, estamos aquí para apoyarte en cada paso.
                         </p>
-                        <p>
-                            <img src="./assets/telefono.jpg" alt="tel" width="30" height="22">
+                        <p id="tel">
+                            <img src="./assets/telefono.png" alt="tel" width="30" height="22">
                             58-45812354
                         </p>
-                        <p>
-                            <img src="./assets/correo.jpg" alt="correo" width="30" height="20">
+                        <p id="email">
+                            <img src="./assets/correo.png" alt="correo" width="30" height="20">
                             dream.key.test@gmail.com
                         </p>
                     </div>
                 </div>
 
                 <!-- Formulario membresías -->
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" id="forms_membresias">
                     <div class="container-fluid">
                         <div class="row justify-content-center">
                             <div class="col-12">
@@ -56,31 +55,33 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="precio-publico" class="form-label">Ingresa el precio
-                                                inicial</label>
+                                                público</label>
                                             <input type="text" class="form-control" id="precio-publico"
                                                 placeholder="Ejemplo: 5800.99" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="precio-afiliados" class="form-label">Ingresa el precio
-                                                especial</label>
-                                            <input type="text" class="form-control" id="precio-afiliados"
-                                                placeholder="Ejemplo: 5600.99" required>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="descripcion" class="form-label">Descripción de la
                                                 membresía</label>
                                             <textarea class="form-control" id="descripcion" rows="4"
-                                                placeholder="Ejemplo: Esta membresía abarca salones de belleza, barberias, spa.."
+                                                placeholder="Ejemplo: Esta membresía abarca salones de belleza, barberías, spa.."
                                                 required></textarea>
                                         </div>
+                                        <label for="categoria" class="form-label">Selecciona una categoría</label>
+                                        <select class="form-select" aria-label="Default select example" id="categoria" required>
+                                            <option selected disabled value=""   >Categoría</option>
+                                            <option value="Básico">Básico</option>
+                                            <option value="Estándar">Estándar</option>
+                                            <option value="Premium">Premium</option>
+                                        </select>
+                                        </br>
                                         <div class="mb-3">
                                             <label for="upload_widget" class="form-label">Ingresa imagen de la
                                                 membresía</label>
                                             <input id="upload_widget" class=" form-control" type="file">
                                         </div>
                                         <div class="col-4">
-                                            <button type="submit" class="btn btn-custom" id="btnEnviar">Subir</button>
+                                            <button type="submit" class="btn btn-custom" id="btnEnviar">Subir membresía</button>
                                         </div>
                                     </form>
                                 </div>
@@ -125,6 +126,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script src="./js/js_formulario_membresias/main.js" type="module"></script>
-</body>
+    <script src="./js/js_navbar/navbar-session.js"></script>
 
 </html>

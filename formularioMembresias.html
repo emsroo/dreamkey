@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles-formularioMembresias/style.css">
+    <title>Formulario Membresías</title>
+</head>
+
+<body>
+
+    <div class="formulario_membresias">
+
+        <!-- Header -->
+        <header>
+            <div id="header"></div>
+        </header>
+
+        <!-- Main -->
+        <main class="mainbg">
+
+            <div class="row justify-content-center m-5">
+                <!-- Agregar membresías -->
+                <div class="col-12 col-lg-6 mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title" id="titulo_membresias">Impulsa tu negocio y conecta con más clientes</h5>
+                        <p class="card-text" id="text_1">
+                            Agregar una nueva membresía es tu oportunidad para ofrecer experiencias únicas, destacar tus servicios y aumentar tu visibilidad en nuestra comunidad de belleza y bienestar. ¿Tienes un paquete exclusivo o una oferta irresistible? ¡Este es el lugar perfecto para compartirlo! Completa el formulario y permite que más personas descubran lo que tu negocio tiene para ofrecer. ¿Necesitas ayuda? No dudes en contactarnos, estamos aquí para apoyarte en cada paso.
+                        </p>
+                        <p id="tel">
+                            <img src="./assets/telefono.png" alt="tel" width="30" height="22">
+                            58-45812354
+                        </p>
+                        <p id="email">
+                            <img src="./assets/correo.png" alt="correo" width="30" height="20">
+                            dream.key.test@gmail.com
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Formulario membresías -->
+                <div class="col-12 col-lg-6" id="forms_membresias">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <div class="card rounded-4 p-4">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="nom" class="form-label">Nombre de la membresía</label>
+                                            <input type="text" class="form-control" id="nom"
+                                                placeholder="Ejemplo: Paquete 6" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="precio-publico" class="form-label">Ingresa el precio
+                                                público</label>
+                                            <input type="text" class="form-control" id="precio-publico"
+                                                placeholder="Ejemplo: 5800.99" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="descripcion" class="form-label">Descripción de la
+                                                membresía</label>
+                                            <textarea class="form-control" id="descripcion" rows="4"
+                                                placeholder="Ejemplo: Esta membresía abarca salones de belleza, barberías, spa.."
+                                                required></textarea>
+                                        </div>
+                                        <label for="categoria" class="form-label">Selecciona una categoría</label>
+                                        <select class="form-select" aria-label="Default select example" id="categoria" required>
+                                            <option selected disabled value=""   >Categoría</option>
+                                            <option value="Básico">Básico</option>
+                                            <option value="Estándar">Estándar</option>
+                                            <option value="Premium">Premium</option>
+                                        </select>
+                                        </br>
+                                        <div class="mb-3">
+                                            <label for="upload_widget" class="form-label">Ingresa imagen de la
+                                                membresía</label>
+                                            <input id="upload_widget" class=" form-control" type="file">
+                                        </div>
+                                        <div class="col-4">
+                                            <button type="submit" class="btn btn-custom" id="btnEnviar">Subir membresía</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="error-msg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div id="footer"></div>
+        </footer>
+
+    </div>
+
+    <script>
+        //Cargar el conetenido de header
+        fetch("navTemplete.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+    <script>
+        //Cargar el conetenido de footer
+        fetch("footerTemplate.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="./js/js_formulario_membresias/main.js" type="module"></script>
+    <script src="./js/js_navbar/navbar-session.js"></script>
+
+</html>

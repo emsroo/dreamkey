@@ -1,0 +1,67 @@
+div.formulario_membresias{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+h5#titulo_membresias{
+    font-size: 24px;
+    margin-top: 0px;
+    padding-bottom: 20px;
+}
+
+p#text_1{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+p#tel{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+p#email{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+    h5#titulo_membresias{
+        text-align: center;
+        font-size: 26px;
+        margin-top: 0px;
+        padding-bottom: 20px;
+    }
+
+    p#text_1{
+        text-align: left;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    p#tel{
+        font-size: 17px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    p#email{
+        font-size: 17px;
+        padding-top: 10px;
+    }
+
+    div#forms_membresias{
+        align-items: center;
+        width: 300px;
+    }
+
+}
+
+.mainbg{
+  background-image: url(../../assets/Diseño\ sin\ título.jpg);
+}

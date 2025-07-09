@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles-nosotros/style.css">
+    <title>Nosotros</title>
+</head>
+
+<body>
+  <!--Navbar-->
+
+  <div id="header"></div>
+
+  <!--Descripción del proyecto-->
+  <div class="card-text-center">
+    <div class="card-body">
+      <h1 class="card-title1">Dreamkey</h1><br>
+      <h3 class="card-title">Todo lo que tu belleza necesita, en un solo clic.</h3>
+      <p id="txtDescripcion"class="card-text">Es una plataforma e-commerce enfocada en conectar usuarios con servicios de belleza.
+        mediante una membresía digital. Permitirá a los clientes: Explorar empresas y servicios afiliados. Reservar
+        citas de manera rápida y sin tiempos de espera elevados. Conocer costos antes de agendar. Pagar anticipadamente
+        de forma segura. Para los negocios afiliados,
+        será una herramienta para gestionar citas y atraer más clientes.</p>
+    </div>
+    <div class ="row" style="margin-top: 20px;">
+      <div class="card" style="width: 24rem; margin-right: 10px; margin-left: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">Misión</h5>
+          <p class="txtCardMV" class="card-text">En DreamKey conectamos a nuestros clientes con empresas del sector de la belleza y cuidado personal, ofreciendo una plataforma digital que garantiza calidad, confianza y variedad de servicios, promoviendo el bienestar integral mediante soluciones tecnológicas.
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 24rem; margin-right: 10px; margin-left: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">Visión</h5>
+          <p class="txtCardMV" class="card-text">Mediante nuestra plataforma “DreamKey” nos preocupamos por la calidad de servicios de
+            nuestros clientes y paso a paso buscamos aumentar nuestra red de contactos para que nuestros clientes tengan más
+            opciones y una mejor experiencia uniendo tecnología y belleza.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Biografias de los integrantes en cards-->
+    <div class="container-lg">
+      <div id="list-items" class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <!-- Aquí se insertarán dinámicamente las cards -->
+      </div>
+    </div>
+
+  <div id="footer"></div>
+
+    <script>
+          //Cargar el conetenido de header
+      fetch("navTemplete.html")
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById("header").innerHTML = data;
+          });
+      </script>
+      <script>
+          //Cargar el conetenido de footer
+      fetch("footerTemplate.html")
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById("footer").innerHTML = data;
+          });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+    <script src="./js/js_navbar/navbar-session.js"></script>
+    <script type="module" src="./js/js_nosotros/main.js"></script>
+</body>
+
+</html>

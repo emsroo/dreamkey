@@ -1,0 +1,40 @@
+html{
+    /* Variables */
+
+    /* Background color */
+    --bg-color: #DFE2EA;
+
+    /* Color para los botones */
+    --button-color: #FFD050;
+
+    /* Color para los parrafos*/
+    --p-color: #221132;
+
+    /* Otros colores */
+    --color1-color: #E8ABEB;
+    --color2-color: #EACCEB;
+    --color3-color: #D2CBCB;
+    --color4-color: #FFFFFF;
+    --color5-color: #000000;
+
+}
+
+@font-face {
+    font-family: 'MagallanesRegular';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MagallanesBold';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+
+body {
+    font-family: 'MagallanesRegular', sans-serif;
+    background-color: var(--bg-color);
+}
+
+div.empresaDetail{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}

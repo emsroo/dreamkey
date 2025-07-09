@@ -1,0 +1,220 @@
+html{
+    /* Variables */
+
+    /* Background color */
+    --bg-color: #DFE2EA;
+
+    /* Color para los botones */
+    --button-color: #FFD050;
+
+    /* Color para los parrafos*/
+    --p-color: #221132;
+
+    /* Otros colores */
+    --color1-color: #E8ABEB;
+    --color2-color: #EACCEB;
+    --color3-color: #D2CBCB;
+    --color4-color: #FFFFFF;
+    --color5-color: #000000;
+
+}
+
+
+body {
+  font-family: 'MagallanesRegular', sans-serif;
+  background-color: var(--bg-color);
+}
+
+@font-face {
+    font-family: 'MagallanesRegular';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MagallanesBold';
+    src: url('../../assets/font/MagallanesRegular.otf') format('opentype');
+}
+
+ .form-section{
+    font-family: 'MagallanesRegular', sans-serif;
+    text-align:left;
+   
+}
+
+
+.navbar .navbar-brand {
+    color: #FFFFFF; /* Naranja */
+    font-size: 20px; /* Tamaño de letra opcional */
+  }
+
+  
+.bg-dark-purple {
+    background-color: #221132;
+}
+
+.bg-ligh-yellow{
+    background-color: var(--button-color);
+}
+
+.navbar .nav-link {
+    color: #ffffff; 
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00; 
+}
+
+.navbar .nav-link.active {
+    color: #00bcd4; 
+    font-weight: bold;
+}
+
+.navbar .form-control {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.navbar .form-control::placeholder {
+    color: #cccccc; 
+}
+
+.navbar .btn-outline-light {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #221132;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
+
+p {
+  font-size: small;
+  color: var(--p-color);
+}
+
+/* Estilos generales */
+.footer {
+    background-color: var(--color1-color); /* Color de fondo principal */
+    
+  }
+  
+  /* Colores personalizados */
+  .bg-dark-purple {
+    background-color: #2c0d47; 
+    height: 80px;/* Morado oscuro */
+  }
+  
+  .bg-light-purple {
+    background-color: var(--color1-color); /* Morado claro */
+  }
+  
+  .btn-yellow {
+    background-color: #ffc107; /* Amarillo */
+    color: #2c0d47; /* Texto morado oscuro */
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+  .form-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    background-color: #e5eaf4;
+    border: none;
+    padding: 20px;
+  }
+  .btn-custom {
+    background-color: #ffce00;
+    border: none;
+    color: #2b2a4c;
+    font-weight: bold;
+  }
+  
+  .form-control:focus {
+  border-color: blue;
+  box-shadow: 0 0 0 0.25rem rgba(0, 89, 255, 0.25);
+  }
+  
+  .btn-yellow:hover {
+    background-color: #e0a800;
+  }
+  
+  .footer-link {
+    color: #2c0d47; 
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 600;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .nav {
+    display: inline-block;
+  }
+  
+  h5, h6 {
+   margin-top: 10px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .rounded-start {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .rounded-end {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  #titulo{
+    text-align: center;
+    font-size: 30px;
+    color: var(--color5-color);
+    font-family: 'MagallanesBold', sans-serif;
+    margin-top: 20px;
+  }
+  
+  div.afiliados{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  .card-text{
+    font-size:large;
+    text-align: center;
+  }
+
+  .card-title{
+    font-size: x-large;
+    text-align: center;
+  }
+.fa-star, .fa-star-half-alt {
+    color: var(--bg-color);
+}
+
+.checked {
+    color: var(--button-color);
+}
+

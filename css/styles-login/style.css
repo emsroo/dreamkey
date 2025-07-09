@@ -1,0 +1,162 @@
+html {
+  /* Variables */
+
+  /* Background color */
+  --bg-color: #DFE2EA;
+
+  /* Color para los botones */
+  --button-color: #FFD050;
+
+  /* Color para los parrafos*/
+  --p-color: #221132;
+
+  /* Otros colores */
+  --color1-color: #E8ABEB;
+  --color2-color: #EACCEB;
+  --color3-color: #D2CBCB;
+  --color4-color: #FFFFFF;
+  --color5-color: #000000;
+
+}
+
+
+.container h1 {
+  text-align: center;
+}
+
+
+
+
+.bienvenido {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.negrita {
+  text-align: left;
+}
+
+.mb-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.mb-3 label {
+  width: 100px;
+  margin-right: 10px;
+  color: #000000;
+
+}
+
+main {
+  /* min-height: calc(100vh - altura_header - altura_footer); */
+  /* min-height: calc(100vh - 89px - 104px - 1000px); */
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.password label {
+  width: 100px;
+  margin-right: 10px;
+  color: #000000;
+}
+
+
+
+
+input.form-control {
+  background-color: #D2CBCB;
+  width: 70%;
+
+}
+
+
+input.form-control::placeholder {
+  color: #000000;
+}
+
+.centrar-boton {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.oval-box {
+  border-radius: 30px;
+  padding: 20px;
+  background-color: #221132;
+  color: white;
+  text-align: center;
+}
+
+
+.recuerdame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* o space-around / center según lo que quieras */
+  gap: 10px;
+}
+
+.form-check-label {
+  font-weight: bold;
+}
+
+#btn-registro {
+  background-color: var(--button-color);
+  border: none;
+  color: #000000;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 12px 20px;
+}
+
+div.register{
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  
+}
+#recuerdame{
+  justify-content: center;
+  display: flex;
+  /* text-align: center; */
+   /* padding-left: 90px; */
+}
+.negrita {
+  text-align: center; /* CAMBIO SUGERIDO: De 'left' a 'center' para centrar el título "Login".
+                         Si prefieres que permanezca alineado a la izquierda dentro del bloque
+                         'main' (que ahora está centrado), puedes omitir este cambio. */
+}
+
+.mb-3{
+  padding-top: 20px;
+}
+
+#btnEnviar{
+  margin-top: 5px;
+}
+
+    #error-msg {
+      display:flex;
+      justify-content:center
+   
+    
+    }
+
+.mainbg{
+  background-image: url(../../assets/Diseño\ sin\ título.jpg);
+}

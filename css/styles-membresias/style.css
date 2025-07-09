@@ -1,0 +1,99 @@
+html{
+    /* Variables */
+
+    /* Background color */
+    --bg-color: #DFE2EA;
+
+    /* Color para los botones */
+    --button-color: #FFD050;
+
+    /* Color para los parrafos*/
+    --p-color: #221132;
+
+    /* Otros colores */
+    --color1-color: #E8ABEB;
+    --color2-color: #EACCEB;
+    --color3-color: #D2CBCB;
+    --color4-color: #E5EAF4;
+    --color5-color: #000000;
+
+}
+
+body{
+    background-color: #E5EAF4 !important;
+}
+
+.btn-primary{
+    float: right;
+    background-color: var(--p-color) !important;
+}
+
+/* .card{
+    /* background-color: var(--color4-color) !important;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+} */
+
+.card-body{
+    text-align: center;
+    border-radius: 0px 0px 30px 30px;
+    background-color: var(--bg-color) !important;
+}
+
+.card-header{
+    background-color: var(--p-color) !important;
+    border-radius: 30px 30px 0px 0px !important;
+}
+
+.titulo{
+    color: var(--color4-color);
+}
+
+.card-img-top{
+    border-radius: 5% !important;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+}
+
+.card-text1{
+    background-color: var(--color2-color) ;
+    border-radius: 50%;
+    font-size: 20px;
+    display:inline-block;
+    padding: 10px 5px;    
+}
+
+.card-text2{
+    background-color: var(--button-color) ;
+    border-radius: 40%;
+    font-weight: bold;
+    font-size: 25px;
+    display:inline-block;
+    padding: 10px 8px; 
+    
+}
+
+div.membresias{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  #btnCerrar{
+    background-color: #221132;
+}
+  .botonCompra{
+    background-color: var(--button-color);
+    border : none;
+    align-content: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: none;
+  }
+    .botonCompra:hover{
+        transform: scale(1.10);
+        display: none;
+  }

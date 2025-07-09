@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles-membresias/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Membresías</title>
+</head>
+
+<body>
+
+    <div class="membresias">
+
+        <!-- Header -->
+        <header>
+            <div id="header"></div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <div class="container" style="text-align: right; margin-right: 1rem; margin-top: 1rem;">
+                <div class="row">
+                    <div class="col-sm">
+                        <button type="button" class="btn btn-warning"><a href="./formularioMembresias.html" style="color: black; text-decoration: none;">Agregar Membresía</a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Aquí se agregarán dinámicamente las tarjetas -->
+            <div id="list-items" class="row justify-content-center m-4"></div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div id="footer"></div>
+        </footer>
+
+    </div>
+
+
+    <script>
+        //Cargar el conetenido de header
+        fetch("navTemplete.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+    <script>
+        //Cargar el contenido de footer
+        fetch("footerTemplate.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+    <!-- Creamos las cards -->
+    <script src="./js/js_membresias/main.js" type="module"></script>
+    <!-- Agrgamos script que carga las membresias del localStorage al HTML -->
+    <script type="module" src="./js/js_membresias/loadMembresias.js"></script>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/js_navbar/navbar-session.js"></script>
+
+</body>
+
+</html>

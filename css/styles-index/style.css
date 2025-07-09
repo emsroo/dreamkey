@@ -1,0 +1,111 @@
+html{
+    /* Variables */
+
+    /* Background color */
+    --bg-color: #DFE2EA;
+
+    /* Color para los botones */
+    --button-color: #FFD050;
+
+    /* Color para los parrafos*/
+    --p-color: #221132;
+
+    /* Otros colores */
+    --color1-color: #E8ABEB;
+    --color2-color: #EACCEB;
+    --color3-color: #D2CBCB;
+    --color4-color: #FFFFFF;
+    --color5-color: #000000;
+
+}
+
+body {
+    font-family: 'MagallanesRegular', sans-serif;
+    background-color: var(--bg-color);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+p {
+    font-size: large;
+    color: var(--p-color);
+}
+
+/*
+
+.carousel-img {
+    max-height: 30px; /* Ajusta a tu gusto 
+    object-fit: contain; /* o "cover" si quieres recorte elegante 
+}
+
+.carousel-img {
+    height: 40px; /* Puedes ajustar esto según lo que necesites 
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-size {
+    max-height: 30px;
+    overflow: hidden;
+}
+
+.carousel-img {
+    height: 40vh;
+    object-fit: cover;
+}
+*/
+
+.jumbotron{
+    background-color: #FFFFFF;
+    color: #221132;
+}
+
+.carousel-item img {
+    height: 350px;
+    object-fit: cover;
+    width: 50%;
+}
+h2.secciones{
+    text-align: center;
+    background-color: #2c0d47; 
+    color: #ffffff;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bg-light{
+    width: 100%;
+    max-width: 200px;
+}
+
+.img-mini {
+  max-width: 250px;
+  min-width: 100px;
+  height: auto;
+  border-radius: 25%;
+}
+
+.contenedor-servicios{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #E8ABEB;
+    border-radius: 20%;
+}
+
+h2.reviews{
+    text-align: left;
+}
+
+div.index_dreamkey{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
